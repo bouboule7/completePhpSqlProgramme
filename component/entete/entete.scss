@@ -1,0 +1,23 @@
+body{
+    margin: 0%;
+}
+.all{
+    display: flex;
+    background-color: #1f17fe;
+    height: max-content;
+}
+.petite-espace{
+    flex:0.05;
+}
+.espace{
+    flex: 0.9;
+}
+.logo{
+    height: 70px;
+    padding-right: 30px;
+}
+.titre{
+    font-weight: bold;
+    color: black;
+    font-size: x-large;
+}
