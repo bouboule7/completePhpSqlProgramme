@@ -1,0 +1,27 @@
+p{
+    text-align:center;
+    font-size:x-large;
+    color:blue;
+}
+.singup{
+    display:flex;
+    text-align:center;
+}
+input{
+        margin:10px;
+        text-align:center;
+        border-radius:5px;
+        width:max-content;
+        height:30px;
+        border:1px solid black;
+        background-color:#00000017;
+}
+label{
+        margin:10px;
+        text-align:center;
+        width:100%;
+        height:30px;
+}
+button{
+    margin:10%;
+}

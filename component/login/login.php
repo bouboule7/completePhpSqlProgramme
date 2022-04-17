@@ -12,7 +12,7 @@
         <br/>
         <input type="password" name="password" id="password" class="password" required/>
         <br/>
-        <a href="/page/singup/singup.php">Pas encore de compte?</a>
+        <a href="./../../page/singup/singup.php">Pas encore de compte?</a>
         <br/>
         <button type="submit">Se connecter</button>
     </form>
