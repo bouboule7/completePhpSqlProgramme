@@ -3,7 +3,7 @@ p{
     font-size:x-large;
     color:blue;
 }
-.singup{
+.singupform{
     display:flex;
     text-align:center;
 }
@@ -13,8 +13,20 @@ input{
         border-radius:5px;
         width:max-content;
         height:30px;
-        border:1px solid black;
+        border:1px solid rgb(255, 6, 6);
         background-color:#00000017;
+}
+input::placeholder{
+    color: rgb(0, 0, 0);
+}
+select{
+    border-radius:5px;
+    border:1px solid rgb(255, 6, 6);
+    width:max-content;
+    height:40px;
+}
+option{
+    border-radius: 10px;
 }
 label{
         margin:10px;
@@ -24,4 +36,7 @@ label{
 }
 button{
     margin:10%;
+}
+.rouge{
+    color: rgb(255, 6, 6);
 }

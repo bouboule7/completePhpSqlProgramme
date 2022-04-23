@@ -1,0 +1,25 @@
+.sing{
+    margin: 10px 20px auto auto;
+    display: flex;
+}
+.sing-espace{
+    flex: 1;
+    align-items: center;
+}
+.singin{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgba(54, 10, 248, 0.453);
+    padding: 10px 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+.singup{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgba(16, 145, 4, 0.433);
+    border-radius: 15px;
+}
