@@ -1,20 +1,16 @@
 <?php
 session_start();
+include_once("./../fonction/connectionBDD.php");
 if($_SESSION['statue']==1)
     header('Location: ./../page/accueil/accueil.php');
+$_SESSION['nom'] = htmlspecialchars($_GET['nom']);
+$_SESSION['pseudo'] = htmlspecialchars($_GET['nom']);
+$_SESSION['compte'] = htmlspecialchars($_GET['nom']);
 
 if((htmlspecialchars($_GET['password']))==(htmlspecialchars($_GET['password2'])))
 {
-    try
-    {
-        $bdd = new PDO('mysql:host=localhost;dbname=baseDeDonne1', 'root', 'Tsaramanga1&');
-// -------
-    }
-    catch(Exception $e)
-    {
-    // En cas d'erreur, on affiche un message et on arrête tout
-        die('Erreur : '.$e->POSTMessage());
-    }
+
+    $bdd=connectionBDD();
     // Si tout va bien, on peut continuer
     if(!(htmlspecialchars($_POST['mail'])))
         $_GET['mail']=$_SESSION['mail'];
@@ -31,10 +27,9 @@ if((htmlspecialchars($_GET['password']))==(htmlspecialchars($_GET['password2']))
     $_SESSION['statue']=1;  
 
     include_once('./../classe/User.class.php');
-
-    echo("avan class");
-    $cePC=new User(0);
-            echo("ici");
+    include_once('./../classe/Compte.class.php');
+    
+    $cePC=new User(0,$_GET['numero'],$_GET['sexe'],$_GET['pays'],$_GET['nationality']);
      header('Location: ./../page/accueil/accueil.php');
 }
 header('Location: ./../page/singup/singup.php?motdp=incorrect');

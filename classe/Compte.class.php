@@ -1,23 +1,21 @@
 <?php
 session_start();
 class Compte{
-    public function __construct(){
-        echo("<br/>start");
-     /*   try
-        {
-            $bdd = new PDO('mysql:host=localhost;dbname=baseDeDonne1', 'root', 'Tsaramanga1&');
-    // -------
-        }
-        catch(Exception $e)
-        {
-        // En cas d'erreur, on affiche un message et on arrête tout
-            die('Erreur : '.$e->POSTMessage());
-        }       */
-
-        $req = $bdd->query('CREATE TABLE '.$nom.' ( pseudo text, numero int, sexe text, pays text,nationality text, statues text)');
+    public function __construct($numero,$sexe,$pays,$nationality){
+        $bdd=connectionBDD();
+        $req = $bdd->query('CREATE TABLE '.$_SESSION['nom'].' ( pseudo text, numero int, sexe text, pays text,nationality text, statues text)');
         
         $req->closeCursor();
-        echo("table created");
+        
+        $req = $bdd->prepare('INSERT INTO '.$_SESSION['nom'].' (pseudo, numero,sexe,pays,nationality) VALUES(:pseudo, :numero, :sexe, :pays,:nationality)');
+        $req->execute(array(
+                    'pseudo' => $_SESSION['nom'],
+                    'numero' => $numero,
+                    'sexe' => $sexe,
+                    'pays' => $pays,
+                    'nationality' => $nationality
+        )); 
+        $req->closeCursor();
     }
     public function getPseudo ()
     {

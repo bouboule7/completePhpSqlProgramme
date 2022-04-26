@@ -32,7 +32,7 @@ if($_SESSION['statue']==1)
             <br/>
             <label for="telephone">Telephone:</label>
             <br/>
-            <input type="number" name="telephone" id="telephone" class="telephone" required/>
+            <input type="number" name="numero" id="numero" class="numero" required/>
             <br/>
             <label for="password" class="<?php if($_GET['motdp']) echo('rouge');?>">Mot de passe: </label>
             <br/>
