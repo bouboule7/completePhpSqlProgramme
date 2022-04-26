@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./component/navigation.scss">
+<link rel="stylesheet" href="./component/navigation.css">
 <div class="navigation">
     <a href="./../accueil/accueil.php">acceuil</a>
     <a href="./../message/message.php">message</a>

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./../../component/denied/denied.scss">
+<link rel="stylesheet" href="./../../component/denied/denied.css">
 <div class="denied">
     <h1 class="error">ERROR</h1>
     <h1 class="error">ACCES REFUSER</h1>

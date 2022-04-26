@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./accueil.scss">
+<link rel="stylesheet" href="./accueil.css">
 <?php
 include('./../../component/navigation/navigation.php');
 include('./../../component/contenueaccueil/contenueaccueil.php');

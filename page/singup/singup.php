@@ -13,7 +13,7 @@ if($_SESSION['statue']==1)
 </head>
 <body>
 
-<link rel="stylesheet" href="./singup.scss">
+<link rel="stylesheet" href="./singup.css">
     <?php 
     include("./../../component/entete/entete.html"); 
     include("./../../component/sing/sing.html");

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./../../component/pied/pied.scss">
+<link rel="stylesheet" href="./../../component/pied/pied.css">
 <div class="pied">
     <a href="./../accueil/accueil.php">acceuil</a>
     <a href="./../message/message.php">message</a>

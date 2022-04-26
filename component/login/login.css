@@ -1,0 +1,21 @@
+.login{
+    margin-left:5%;
+    margin-top: 10vh;
+}
+.start{
+    color: rgb(255, 0, 0);
+    margin-bottom: 10vh;
+}
+.labemail{
+    height: auto;
+    color: #000;
+}
+.mail{
+    width: auto;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.next{
+    align-self: start;
+}

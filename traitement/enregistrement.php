@@ -17,18 +17,24 @@ if((htmlspecialchars($_GET['password']))==(htmlspecialchars($_GET['password2']))
     }
     // Si tout va bien, on peut continuer
     if(!(htmlspecialchars($_POST['mail'])))
-        $_POST['mail']=$_SESSION['mail'];
-    $req = $bdd->prepare('INSERT INTO utilisateur(pseudo, mail,numero, motdepasse, sexe, pays, nationality) VALUES(:pseudo, :mail,:numero, :motdepasse, :sexe, :pays,:nationality)');
+        $_GET['mail']=$_SESSION['mail'];
+    else
+    $_SESSION['mail']=htmlspecialchars($_GET['mail']);
+    $req = $bdd->prepare('INSERT INTO utilisateur(nom, mail,motdepasse,pseudo,compte) VALUES(:nom, :mail, :motdepasse, :pseudo,:compte)');
     $req->execute(array(
-                'pseudo' => htmlspecialchars($_POST['nom']),
-                'mail' => htmlspecialchars($_POST['mail']),
-                'numero' => htmlspecialchars((int)$_POST['telephone'])  ,
-                'motdepasse' => htmlspecialchars($_POST['password']),
-                'sexe' => htmlspecialchars($_POST['sexe']),
-                'pays' => htmlspecialchars($_POST['pays']),
-                'nationality' => htmlspecialchars($_POST['nationality'])
+                'nom' => htmlspecialchars($_GET['nom']),
+                'mail' => htmlspecialchars($_GET['mail']),
+                'motdepasse' => htmlspecialchars($_GET['password']),
+                'pseudo' => htmlspecialchars($_GET['nom']),
+                'compte' => htmlspecialchars($_GET['nom'])
     ));     
-    $_SESSION['statue']=1;   
+    $_SESSION['statue']=1;  
+
+    include_once('./../classe/User.class.php');
+
+    echo("avan class");
+    $cePC=new User(0);
+            echo("ici");
      header('Location: ./../page/accueil/accueil.php');
 }
 header('Location: ./../page/singup/singup.php?motdp=incorrect');

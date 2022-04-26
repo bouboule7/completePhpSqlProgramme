@@ -45,6 +45,10 @@ if(htmlspecialchars($_GET['mail'])){
                
                if ($donne['motdepasse']==htmlspecialchars($_GET['password']))
                {
+                    include_once('./../classe/User.class.php');
+
+                    $cePC=new User(htmlspecialchars($_GET['mai']),1);
+
                    header('Location: ./../page/accueil/accueil.php');
                     $_SESSION['statue']=1;
                }
@@ -81,6 +85,10 @@ catch(Exception $e){
                
         if ($donne['motdepasse']==htmlspecialchars($_GET['password']))
        {
+        include_once('./../classe/User.class.php');
+
+        $cePC=new User(htmlspecialchars($_SESSION['mai']),1);
+        
            header('Location: ./../page/accueil/accueil.php');
             $_SESSION['statue']=1;
        }
