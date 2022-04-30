@@ -29,10 +29,10 @@ if((htmlspecialchars($_GET['password']))==(htmlspecialchars($_GET['password2']))
     include_once('./../classe/User.class.php');
     include_once('./../classe/Compte.class.php');
     
+    $req->closeCursor();
     $cePC=new User(0,$_GET['numero'],$_GET['sexe'],$_GET['pays'],$_GET['nationality']);
      header('Location: ./../page/accueil/accueil.php');
 }
 header('Location: ./../page/singup/singup.php?motdp=incorrect');
 
-echo(htmlspecialchars($_GET['password']).(htmlspecialchars($_GET['password2'])));
  ?>

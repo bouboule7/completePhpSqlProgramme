@@ -1,0 +1,84 @@
+.navigation{
+    position:fixed;
+    display: flex;
+    background-color:yellow;
+    margin-top:120px;
+}
+
+.menu{
+    position: fixed;
+    display: flex;
+    height : 9vh;
+    margin-top: -45px;
+    width: 100vw;
+    background-color: rgba(29, 29, 29);
+    z-index:-1;
+}
+.alien, .alien:active{
+    color:rgb(195, 0, 255);
+}
+.espace{
+    flex: 0.5;
+}
+.connecte{
+    background-color:rgb(79, 80, 79);
+    padding:5px 10px;
+    font-weight: 500;
+    margin-left: -10px;
+}
+#btnControl {
+    display: none;
+}
+
+#btnControl:checked + label > ul {
+    visibility: visible;
+}
+ul{
+    visibility: hidden;
+    margin-top: 20px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: rgba(242, 239, 239, 0.893);
+    width: max-content;    
+}
+
+ul li{
+    list-style-type: none;
+    width: max-content;
+    font-size: 80%;
+    font-weight: 500;
+    padding: 10px 0px 5px 10px;
+    margin-left: -32px;
+}
+.deconnecte{
+    border-top: solid black 1px;
+    border-radius: 0px 0px 1px 10px;
+}
+li:hover{
+    color: white;
+    background-color: rgb(25 46 91);
+}
+.btn{
+    margin: 2vh 0px 0px auto;
+    height: auto;
+    border: none;
+    font-size: 130%;
+}
+.loupe{
+    width:30px;
+    margin-left:1vw;
+}
+.search{
+    position:fixed;
+    z-index:1;
+    align-items:center;
+    display:flex;
+    margin-top:88px;
+    width:40;
+}
+.recherche{
+    margin:auto 1vw;
+    width:35vw;
+}
+.margtop{
+    padding-bottom:150px;
+}

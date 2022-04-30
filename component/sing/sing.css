@@ -1,25 +1,21 @@
 .sing{
-    margin: 10px 20px auto auto;
     display: flex;
 }
 .sing-espace{
     flex: 1;
     align-items: center;
 }
-.singin{
+.singin,.singup{
+    margin-top:100px;
     color: rgb(0, 0, 0);
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(54, 10, 248, 0.453);
+    background-color: rgba(248, 248, 248, 0.289);
     padding: 10px 20px;
+    border-radius: 15px;
+    transition: 3s;
     margin-right: 20px;
-    border-radius: 15px;
 }
-.singup{
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    text-decoration: none;
-    padding: 10px 20px;
-    background-color: rgba(35, 4, 145, 0.433);
-    border-radius: 15px;
+.singup:hover, .singin:hover{
+    background-color: whitesmoke;
 }

@@ -1,5 +1,6 @@
-p{
-    color: blue;
+.lorem{
+    color: rgb(255, 255, 255);
     font-size: 14px;
     font-weight: 100;
+    font-family: Helvetica, sans-serif;
 }

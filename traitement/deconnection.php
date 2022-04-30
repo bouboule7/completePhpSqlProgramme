@@ -1,5 +1,7 @@
-lo<?php 
+<?php 
 session_start();
-    $_SESSION['statue']=0;
-    header('Location: ./../page/accueil/accueil.php');
+    // Suppression des variables de session et de la session
+    $_SESSION = array();
+    session_destroy();
+    header('Location: ./../index.php');
 ?>
