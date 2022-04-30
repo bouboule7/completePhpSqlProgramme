@@ -1,0 +1,24 @@
+.nouveau{
+    color: red;
+}
+.nouveaumessage{
+    width: 50%;
+}
+.envoyer{
+    padding: 10px 20px;
+}
+.vous{
+    padding:15px 50px;
+    border-radius:2vw;
+    margin-left:40vw;
+    color:black;
+    background-color:#00ffdd8c;
+    width:50vw;
+}
+.lui{
+    padding:15px 50px;
+    border-radius:2vw;
+    color:black;
+    width:60vw;
+    background-color:#faff008c;
+}

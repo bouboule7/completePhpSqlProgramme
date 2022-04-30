@@ -1,0 +1,11 @@
+.profil{
+    padding-top:10px;
+    padding-bottom:10px;
+    border: 1px green solid;
+    color:black;
+    text-decoration:none;
+    display:flex;
+}
+.marge{
+    flex:0.5;
+}

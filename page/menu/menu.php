@@ -6,15 +6,37 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./menu.css">
     <title>Menu</title>
 </head>
 <body>
 
     <?php 
-    include("./../../component/entete/entete.html"); 
-    include("./../../component/navigation/navigation.php"); 
-    include('./../../component/pied/pied.php');
-    ?>
 
+    include("./../../component/entete/entete.html"); 
+    if($_SESSION['statue']==1){
+        include("./../../component/navigation/navigation.php"); 
+        ?>
+        <div class="profil">
+            <div class="marge"></div>
+            <a href="./../profil/profil.php">Voir le profil</a>
+            <div class="marge"></div>
+        </div>
+
+        <div class="profil modifier">
+            <div class="marge"></div>
+            <a href="./../modifierprofil/modifierprofil.php">Modifier le profil</a>
+            <div class="marge"></div>
+        </div>
+
+        <?php
+        include('./../../component/pied/pied.php');
+    }
+    else{
+        include("./../../component/denied/denied.php");
+        include("./../../component/login/login.php");
+    }
+
+    ?>
 </body>
 </html>

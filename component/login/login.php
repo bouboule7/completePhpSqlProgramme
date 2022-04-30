@@ -12,4 +12,8 @@ include("./../../component/sing/sing.html");
         <br/>
         <button class"next" type="submit">Next</button>
     </form>
+    <p class="devener">
+        Joov'Teck, la société des nul fait par des nuls...
+        <span class="curseur">|</span>
+    </p>
 </div>

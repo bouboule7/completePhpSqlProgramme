@@ -1,21 +1,79 @@
 .login{
     margin-left:5%;
-    margin-top: 10vh;
+    margin-top: 11vh;
+    color: #00ff06;
+}
+
+@keyframes couleur {
+  0%   {color:red;}
+  25%  {color:yellow;}
+  50%  {color:blue; }
+  75%  {color:green;}
+  100% {color:red; }
 }
 .start{
-    color: rgb(255, 0, 0);
+    animation:couleur 20s infinite;
     margin-bottom: 10vh;
 }
 .labemail{
+    font-size:200%;
     height: auto;
-    color: #000;
 }
 .mail{
-    width: auto;
+    text-align: center;;
+    box-shadow: 0 0 2px 0 white;
+    background: inherit;
+    backdrop-filter: blur(10px);
+    width: 25vw;
     border-top: none;
-    border-left: none;
-    border-right: none;
+    border-right:none;
+    border-radius:15px 0px 15px 15px;
+    height:40px;
+    color:white;
+    transition:2s;
+    font-size:14px;
 }
-.next{
-    align-self: start;
+.mail:hover{
+    color:#0aff0a;
+}
+.mail:focus{
+  border-radius:5px;
+}
+button{
+    margin:10px auto auto;
+    font-size:large;
+    padding:5px 10px;
+    border-radius:5px;
+    transition:1s;
+}
+button:hover{
+  background-color:#1875008c;
+  border:0.5px solid white;
+  color:#0aff0a;
+  font-weight:bold;
+}
+@media screen and (max-width:600px) {
+  .mail{
+    width: 200px;
+  }
+}
+@keyframes ecrire {
+    from{
+    margin-left:-310px;
+    padding-right:310px;
+    }
+    to{
+      
+    margin-left:0px;
+    padding-right:0px;
+    }
+}
+.devener{
+  margin-top:20vh;
+  text-align:center;
+}
+.curseur{
+    animation:ecrire 10s infinite;
+    background-color:#000000;
+    padding-bottom:2px;
 }

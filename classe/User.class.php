@@ -6,12 +6,6 @@ include_once('./Compte.class.php');
 
 class User
 {
-    private $nom;
-    private $id;
-    private $mail;
-    private $pseudo;
-    private $motdepasse;
-    private $compte;
     public function __construct($oui,$numero,$sexe,$pays,$nationality){
         $mail=$_SESSION['mail'];
         
@@ -21,10 +15,10 @@ class User
         $req->execute(array($_SESSION['mail']));
         
         $donne=$req->fetch();
-        $this->nom=$donne['nom'];
-        $this->id=$donne['id'];
-        $this->pseudo=$donne['pseudo'];
-        $this->motdepasse=$donne['motdepasse'];
+        $_SESSION['nom']=$donne['nom'];
+        $_SESSION['id']=$donne['id'];
+        $_SESSION['pseudo']=$donne['pseudo'];
+        $_SESSION['motdepasse']=$donne['motdepasse'];
         if($oui==1)
         {
             $this->compte=$donne['compte'];
@@ -34,7 +28,8 @@ class User
         else
         {
         $req->closeCursor();
-            $rien=new Compte($numero,$sexe,$pays,$nationality);
+            $this->compte=$donne['nom'];
+            $nouveau=new Compte($numero,$sexe,$pays,$nationality);
         }
     }
     public function getnom ()
