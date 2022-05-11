@@ -1,4 +1,33 @@
-
+form{
+    margin-left:5%;
+}
+label{
+    font-size:26px;
+    margin-left:2%;
+}
+input{
+    margin:10px auto;
+    border-radius:20px 0px 20px 20px;
+    font-size:14px;
+    padding:10px 20px;
+    color: white;
+    background-color:#00000073;
+}
 input::placeholder{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+input:hover{
+    border:solid #33ff33 3px;
+}
+button{
+    margin:1% 2%;
+    font-size:20px;
+    border-radius:5px;
+    padding:1% 2%;
+}
+
+.error{
+    font-size:26px;
+    color:red;
+    font-weight:bold;
 }

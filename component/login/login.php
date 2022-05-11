@@ -8,7 +8,7 @@ include("./../../component/sing/sing.html");
         <br/>
         <label class="labemail" for="mail">E-mail</label>
         <br/>
-        <input type="mail" name="mail" id="mail" class="mail" required/>
+        <input type="email" name="mail" id="mail" class="mail" required/>
         <br/>
         <button class"next" type="submit">Next</button>
     </form>

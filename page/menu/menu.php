@@ -19,14 +19,9 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
         ?>
         <div class="profil">
             <div class="marge"></div>
-            <a href="./../profil/profil.php">Voir le profil</a>
+            <a href="./../profil/profil.php?id=<?php echo($_SESSION['id']);?>">Voir le profil</a>
             <div class="marge"></div>
         </div>
-
-        <div class="profil modifier">
-            <div class="marge"></div>
-            <a href="./../modifierprofil/modifierprofil.php">Modifier le profil</a>
-            <div class="marge"></div>
         </div>
 
         <?php

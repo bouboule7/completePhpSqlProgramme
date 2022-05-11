@@ -15,28 +15,15 @@ class User
         $req->execute(array($_SESSION['mail']));
         
         $donne=$req->fetch();
-        $_SESSION['nom']=$donne['nom'];
         $_SESSION['id']=$donne['id'];
         $_SESSION['pseudo']=$donne['pseudo'];
         $_SESSION['motdepasse']=$donne['motdepasse'];
-        if($oui==1)
-        {
-            $this->compte=$donne['compte'];
 
         $req->closeCursor();
-        }
-        else
-        {
-        $req->closeCursor();
-            $this->compte=$donne['nom'];
+        if($oui!=1){
             $nouveau=new Compte($numero,$sexe,$pays,$nationality);
         }
-    }
-    public function getnom ()
-    {
-        $this->nom ="lala";
-        echo("sorty");
-        return $this-> nom;
+
     }
 }
 ?>
