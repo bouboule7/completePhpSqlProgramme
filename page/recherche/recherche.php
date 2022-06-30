@@ -13,7 +13,7 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
     <?php 
     $trouver=0;
     include('./../../fonction/presentationcourt.php');
-    include("./../../fonction/connectionBDD.php");
+    include('./../../fonction/pseudo.php');
 
     include("./../../component/entete/entete.html"); 
         if($_SESSION['statue']==1){
@@ -24,12 +24,12 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
                 ?>
                 <p>Resultat des recherches :</p> <?php echo($_POST['recherche']);
                 $bdd=connectionBDD();
-                $req=$bdd->query("SELECT id ,nom,pseudo FROM utilisateur");
+                $req=$bdd->query("SELECT id ,pseudo FROM utilisateur");
                 while($donne=$req->fetch())
                 {
                     if($donne['pseudo']==htmlspecialchars($_POST["recherche"]))
                     {
-                        echo(presentationcourt($donne['nom']));
+                        echo(presentationcourt($donne['id']));
                         $trouver=1;
                     }
                 }

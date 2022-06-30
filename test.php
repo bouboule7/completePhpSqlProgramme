@@ -1,0 +1,10 @@
+<?php
+    $or=12;
+    echo($or);
+    $lettre=(string)($or);
+    if($lettre=="12")
+        echo("suvv");
+    if($lettre==12)
+        echo("suvv");
+        echo($lettre[1]);
+?>

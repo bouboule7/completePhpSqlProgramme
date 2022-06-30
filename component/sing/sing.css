@@ -1,3 +1,10 @@
+body{
+    color: white;
+    background-color:black;
+    background-image:url('./../../assets/img/fond.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+}
 .sing{
     display: flex;
 }

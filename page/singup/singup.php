@@ -22,13 +22,19 @@ if($_SESSION['statue']==1)
     <div class="singupform">
         <div class="espace"></div>
         <form action="./../../traitement/enregistrement.php" methode="post">
+        <div class="blok">
+            <div class="eespace"></div>
             <label for="nom">Nom:</label>
-            <br/>
             <input type="text" name="nom" id="nom" class="nom" required/>
-            <br/>
+
+            <div class="eespace"></div>
+            <label for="nom">Prenom:</label>
+            <input type="text" name="prenom" id="prenom" class="prenom" required/>
+            <div class="eespace"></div>
+        </div>
             <label for="mail">E-mail:</label>
             <br/>
-            <input placeholder="<?php echo(htmlspecialchars($_SESSION['mail'])); ?>" type="mail" name="mail" id="mail" class="mail"/>
+            <input placeholder="<?php echo(htmlspecialchars($_SESSION['mail'])); ?>" type="email" name="mail" id="mail" class="mail"/>
             <br/>
             <label for="telephone">Telephone:</label>
             <br/>

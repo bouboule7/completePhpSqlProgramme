@@ -1,10 +1,5 @@
 body{
     margin: 0%;
-    background-color:black;
-    background-image:url('./../../assets/img/fond.jpg');
-    background-size:cover;
-    background-repeat:no-repeat;
-    color:rgba(238, 240, 238, 0.823);
 }
 .all{
   margin-top:-12px;
@@ -16,6 +11,7 @@ body{
     height: max-content;
     border-bottom:1px solid white;
     width:100vw;
+    z-index: 1;
 }
 .espacetete{
   flex:0.9;

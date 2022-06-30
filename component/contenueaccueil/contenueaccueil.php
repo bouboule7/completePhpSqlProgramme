@@ -1,37 +1,18 @@
 <link rel="stylesheet" href="./../../component/contenueaccueil/contenueaccueil.css">
-<p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error rem doloribus, explicabo suscipit beatae voluptas aliquid quibusdam doloremque reiciendis sed saepe repellendus possimus rerum amet sequi iusto, sunt laudantium ipsa?</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, accusantium error? Autem molestiae delectus optio facere quas totam, consequuntur recusandae rerum debitis quasi consequatur? Quos in id animi nesciunt mollitia.</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tempore, dignissimos, aspernatur itaque dicta non culpa fugiat atque, voluptate a eligendi quisquam quia sapiente soluta voluptatem minima quasi ex impedit!</p>
-<p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error rem doloribus, explicabo suscipit beatae voluptas aliquid quibusdam doloremque reiciendis sed saepe repellendus possimus rerum amet sequi iusto, sunt laudantium ipsa?</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, accusantium error? Autem molestiae delectus optio facere quas totam, consequuntur recusandae rerum debitis quasi consequatur? Quos in id animi nesciunt mollitia.</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tempore, dignissimos, aspernatur itaque dicta non culpa fugiat atque, voluptate a eligendi quisquam quia sapiente soluta voluptatem minima quasi ex impedit!</p>
-<p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error rem doloribus, explicabo suscipit beatae voluptas aliquid quibusdam doloremque reiciendis sed saepe repellendus possimus rerum amet sequi iusto, sunt laudantium ipsa?</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, accusantium error? Autem molestiae delectus optio facere quas totam, consequuntur recusandae rerum debitis quasi consequatur? Quos in id animi nesciunt mollitia.</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tempore, dignissimos, aspernatur itaque dicta non culpa fugiat atque, voluptate a eligendi quisquam quia sapiente soluta voluptatem minima quasi ex impedit!</p>
-<p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error rem doloribus, explicabo suscipit beatae voluptas aliquid quibusdam doloremque reiciendis sed saepe repellendus possimus rerum amet sequi iusto, sunt laudantium ipsa?</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, accusantium error? Autem molestiae delectus optio facere quas totam, consequuntur recusandae rerum debitis quasi consequatur? Quos in id animi nesciunt mollitia.</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tempore, dignissimos, aspernatur itaque dicta non culpa fugiat atque, voluptate a eligendi quisquam quia sapiente soluta voluptatem minima quasi ex impedit!</p>
-<p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error rem doloribus, explicabo suscipit beatae voluptas aliquid quibusdam doloremque reiciendis sed saepe repellendus possimus rerum amet sequi iusto, sunt laudantium ipsa?</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, accusantium error? Autem molestiae delectus optio facere quas totam, consequuntur recusandae rerum debitis quasi consequatur? Quos in id animi nesciunt mollitia.</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tempore, dignissimos, aspernatur itaque dicta non culpa fugiat atque, voluptate a eligendi quisquam quia sapiente soluta voluptatem minima quasi ex impedit!</p>
-<p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error rem doloribus, explicabo suscipit beatae voluptas aliquid quibusdam doloremque reiciendis sed saepe repellendus possimus rerum amet sequi iusto, sunt laudantium ipsa?</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, accusantium error? Autem molestiae delectus optio facere quas totam, consequuntur recusandae rerum debitis quasi consequatur? Quos in id animi nesciunt mollitia.</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tempore, dignissimos, aspernatur itaque dicta non culpa fugiat atque, voluptate a eligendi quisquam quia sapiente soluta voluptatem minima quasi ex impedit!</p>
-<p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error rem doloribus, explicabo suscipit beatae voluptas aliquid quibusdam doloremque reiciendis sed saepe repellendus possimus rerum amet sequi iusto, sunt laudantium ipsa?</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, accusantium error? Autem molestiae delectus optio facere quas totam, consequuntur recusandae rerum debitis quasi consequatur? Quos in id animi nesciunt mollitia.</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tempore, dignissimos, aspernatur itaque dicta non culpa fugiat atque, voluptate a eligendi quisquam quia sapiente soluta voluptatem minima quasi ex impedit!</p>
-<p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error rem doloribus, explicabo suscipit beatae voluptas aliquid quibusdam doloremque reiciendis sed saepe repellendus possimus rerum amet sequi iusto, sunt laudantium ipsa?</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, accusantium error? Autem molestiae delectus optio facere quas totam, consequuntur recusandae rerum debitis quasi consequatur? Quos in id animi nesciunt mollitia.</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tempore, dignissimos, aspernatur itaque dicta non culpa fugiat atque, voluptate a eligendi quisquam quia sapiente soluta voluptatem minima quasi ex impedit!</p>
-<p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error rem doloribus, explicabo suscipit beatae voluptas aliquid quibusdam doloremque reiciendis sed saepe repellendus possimus rerum amet sequi iusto, sunt laudantium ipsa?</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, accusantium error? Autem molestiae delectus optio facere quas totam, consequuntur recusandae rerum debitis quasi consequatur? Quos in id animi nesciunt mollitia.</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tempore, dignissimos, aspernatur itaque dicta non culpa fugiat atque, voluptate a eligendi quisquam quia sapiente soluta voluptatem minima quasi ex impedit!</p>
-<p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error rem doloribus, explicabo suscipit beatae voluptas aliquid quibusdam doloremque reiciendis sed saepe repellendus possimus rerum amet sequi iusto, sunt laudantium ipsa?</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, accusantium error? Autem molestiae delectus optio facere quas totam, consequuntur recusandae rerum debitis quasi consequatur? Quos in id animi nesciunt mollitia.</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tempore, dignissimos, aspernatur itaque dicta non culpa fugiat atque, voluptate a eligendi quisquam quia sapiente soluta voluptatem minima quasi ex impedit!</p>
-<p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error rem doloribus, explicabo suscipit beatae voluptas aliquid quibusdam doloremque reiciendis sed saepe repellendus possimus rerum amet sequi iusto, sunt laudantium ipsa?</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, accusantium error? Autem molestiae delectus optio facere quas totam, consequuntur recusandae rerum debitis quasi consequatur? Quos in id animi nesciunt mollitia.</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tempore, dignissimos, aspernatur itaque dicta non culpa fugiat atque, voluptate a eligendi quisquam quia sapiente soluta voluptatem minima quasi ex impedit!</p>
-<p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error rem doloribus, explicabo suscipit beatae voluptas aliquid quibusdam doloremque reiciendis sed saepe repellendus possimus rerum amet sequi iusto, sunt laudantium ipsa?</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, accusantium error? Autem molestiae delectus optio facere quas totam, consequuntur recusandae rerum debitis quasi consequatur? Quos in id animi nesciunt mollitia.</p>
-<p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tempore, dignissimos, aspernatur itaque dicta non culpa fugiat atque, voluptate a eligendi quisquam quia sapiente soluta voluptatem minima quasi ex impedit!</p>
+<a href="./accueil.php">actualiser</a>
+<h1> ACTUALITÉS RECENTES:</h1>
+<?php
+include_once('./../../fonction/presentationPublication.php');
+include_once('./../../fonction/pseudo.php');
+
+$bdd5=connectionBDD();
+$a=0; $b=10;
+if(isset($_GET['a'],$_GET['b'])){
+    $a+=10; $b+=10;
+}
+$requete=$bdd5->query('SELECT publicationId FROM publication ORDER BY publicationId DESC LIMIT '.$a.','.$b.'');
+while($result=$requete->fetch()){
+    presentationPublication($result['publicationId']);
+}
+    echo('<a href="./accueil.php?a='.$a.'&b='.$b.'">Afficher plus d\'actualité</a>');
+?>

@@ -20,7 +20,6 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
             return ("lui");
     }
     include('./../../fonction/pseudo.php');
-    include('./../../fonction/connectionBDD.php');
     include('./../../fonction/BDname.php');
     
     include("./../../component/entete/entete.html"); 
@@ -28,17 +27,29 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
         include("./../../component/navigation/navigation.php"); 
 
         $bdd=connectionBDD();
-        if(isset($_GET['amis']))
+        if(isset($_GET['id']))
         {
-            echo('<h1>'.pseudo($bdd,$_GET['amis']).'</h1>');
-            $req=$bdd->query('SELECT * FROM '.BDname($_SESSION['nom'],$_GET['amis']).'');
+            echo('<h1>'.pseudo($bdd,$_GET['id']).'</h1>');
+            
+            $req=$bdd->query('SELECT id FROM '.BDname($_SESSION['id'],$_GET['id']).' ORDER BY id DESC LIMIT 0,1 ');
+            $idMessage=($req->fetch())['id'];
+            
+            if(isset($_GET['idMessage']))
+                $idMessage=(int)$_GET['idMessage']-5;    
+            $messagelimit=0;
+            if($idMessage>5){
+                $messagelimit=$idMessage-5;
+                echo("<a href='./message.php?id=".$_GET['id']."&idMessage=".$idMessage."'>voir les anciens messages</a>");
+            }
+            $req->closeCursor();
+            $req=$bdd->query('SELECT * FROM '.BDname($_SESSION["id"],$_GET["id"]).' ORDER BY id LIMIT '.$messagelimit.','.$idMessage.'');
             while($donne=$req->fetch())
             {
                 
-                echo('<div class="blocmessage '.vous(pseudo($bdd,$_SESSION['nom']),$donne['pseudo']).'">'.$donne["pseudo"].'<br/>'.$donne["jour"].' '.$donne["temps"].'<br/>'.$donne["message"].'</div>');
+                echo('<div class="blocmessage '.vous(pseudo($bdd,$_SESSION['id']),$donne['pseudo']).'">'.$donne["pseudo"].'<br/>'.$donne["jour"].' '.$donne["temps"].'<br/>'.$donne["message"].'</div>');
             }
             ?>
-            <form action="./../../traitement/nouveaumessage.php?amis=<?php echo($_GET['amis']); ?>" method="post">
+            <form action="./../../traitement/nouveaumessage.php?id=<?php echo($_GET['id']); ?>" method="post">
                 <label for="message">Nouvelle message:</label>
                 <br/>
                 <textarea required name="nouveaumessage" class="nouveaumessage" rows="5" ></textarea>
@@ -49,13 +60,13 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
             <?php
         }
         else{
-            $req=$bdd->query('SELECT * FROM '.$_SESSION["nom"].'discussion');
+            $req=$bdd->query('SELECT * FROM '.$_SESSION["id"].'discussion');
             while($donne=$req->fetch()){
                 if($donne['nouveau']==1)
                     $class="nouveau";
                 else
                     $class="";
-                echo('<a class="'.$class.'" href="./../../traitement/messagevu.php?amis='.$donne['nom_amis'].'">'.pseudo($bdd,$donne["nom_amis"]).'<br/></a>');
+                echo('<a class="'.$class.'" href="./../../traitement/messagevu.php?id='.$donne['nom_amis'].'">'.pseudo($bdd,$donne["nom_amis"]).'<br/></a>');
             }
             $req->closeCursor();
         }

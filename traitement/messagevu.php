@@ -7,11 +7,11 @@ include("./../fonction/temps.php");
 
 $bdd=connectionBDD();
 
-$req=$bdd->prepare('UPDATE '.$_SESSION["nom"].'discussion SET nouveau = :new WHERE nom_amis = :nomamis');
+$req=$bdd->prepare('UPDATE '.$_SESSION["id"].'discussion SET nouveau = :new WHERE nom_amis = :nomamis');
 $req->execute(array('new'=>0,
-                    'nomamis'=>$_GET["amis"]));
+                    'nomamis'=>$_GET["id"]));
 $req->closeCursor();
 
-header('Location: ./../page/message/message.php?amis='.$_GET["amis"]);
+header('Location: ./../page/message/message.php?id='.$_GET["id"]);
 
 ?>
