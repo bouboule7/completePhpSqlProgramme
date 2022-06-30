@@ -15,11 +15,14 @@
         $req=$bdd->prepare('INSERT INTO '.$_SESSION["id"].'post VALUE (:postname)');
         $req->execute(array('postname'=>$nomTable));
         $req->closeCursor();
-        $req = $bdd->query('CREATE TABLE '.$nomTable.' (id int,contenueText text, jour date, heure time, commentaire text, idCommentateur int, datecommentaire date, heurcommentaire time, reactionA int, reactionB int)');
+        $req = $bdd->query('CREATE TABLE '.$nomTable.' (id int,contenueText text,photo1 int, photo2 int, photo3 int, jour date, heure time, commentaire text, idCommentateur int, datecommentaire date, heurcommentaire time, reactionA int, reactionB int)');
         $req->closeCursor();
-        $req=$bdd->prepare('INSERT INTO '.$nomTable.' (id, contenueText, jour, heure, reactionA , reactionB ) VALUES (:id, :contenueText, :jour, :heure, :reactionA , :reactionB)');
+        $req=$bdd->prepare('INSERT INTO '.$nomTable.' (id, contenueText,photo1,photo2, photo3, jour, heure, reactionA , reactionB ) VALUES (:id, :contenueText, :photo1, :photo2, :photo3, :jour, :heure, :reactionA , :reactionB)');
         $req->execute(array('id'=>$_SESSION['id'],
                             'contenueText'=>$_POST['publication'],
+                            "photo1"=>1,
+                            "photo2"=>0,
+                            "photo3"=>0,
                             'jour'=>jour(),
                             'heure'=>temps(),
                             'reactionA'=>0,

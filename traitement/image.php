@@ -1,6 +1,5 @@
 <?php
 
-
 include_once("./../fonction/connectionBDD.php");
     if(isset($_GET['id']) && isset($_GET['type']) && isset($_GET['photoId'])){
         $bdd3=connectionBDD();
