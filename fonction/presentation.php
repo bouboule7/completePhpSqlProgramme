@@ -44,15 +44,17 @@ include_once('./../../fonction/pseudo.php');
                     <div class="margeNom"></div>
                 </div>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab optio mollitia accusantium saepe magnam cumque reiciendis, doloremque similique enim laudantium odio at harum aliquam error voluptates voluptatem. Quod, soluta.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab optio mollitia accusantium saepe magnam cumque reiciendis, doloremque similique enim laudantium odio at harum aliquam error voluptates voluptatem. Quod, soluta.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab optio mollitia accusantium saepe magnam cumque reiciendis, doloremque similique enim laudantium odio at harum aliquam error voluptates voluptatem. Quod, soluta.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab optio mollitia accusantium saepe magnam cumque reiciendis, doloremque similique enim laudantium odio at harum aliquam error voluptates voluptatem. Quod, soluta.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab optio mollitia accusantium saepe magnam cumque reiciendis, doloremque similique enim laudantium odio at harum aliquam error voluptates voluptatem. Quod, soluta.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab optio mollitia accusantium saepe magnam cumque reiciendis, doloremque similique enim laudantium odio at harum aliquam error voluptates voluptatem. Quod, soluta.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab optio mollitia accusantium saepe magnam cumque reiciendis, doloremque similique enim laudantium odio at harum aliquam error voluptates voluptatem. Quod, soluta.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab optio mollitia accusantium saepe magnam cumque reiciendis, doloremque similique enim laudantium odio at harum aliquam error voluptates voluptatem. Quod, soluta.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab optio mollitia accusantium saepe magnam cumque reiciendis, doloremque similique enim laudantium odio at harum aliquam error voluptates voluptatem. Quod, soluta.</p>
+            <?php include_once('./../../fonction/presentationPublicationProfil.php');
+
+            $bdd5=connectionBDD();
+            $a=0; $b=10;
+            if(isset($_GET['a'],$_GET['b'])){
+                $a+=10; $b+=10;
+            }
+            $requete=$bdd5->query('SELECT postName FROM '.$_SESSION["id"].'post ORDER BY postName DESC LIMIT '.$a.','.$b.'');
+            while($result=$requete->fetch()){
+                presentationPublicationProfil($result['postName']);
+            }?>
             <nav>
 
             </nav>
@@ -83,15 +85,17 @@ include_once('./../../fonction/pseudo.php');
                     <div class="margeNom"></div>
                 </div>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab optio mollitia accusantium saepe magnam cumque reiciendis, doloremque similique enim laudantium odio at harum aliquam error voluptates voluptatem. Quod, soluta.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab optio mollitia accusantium saepe magnam cumque reiciendis, doloremque similique enim laudantium odio at harum aliquam error voluptates voluptatem. Quod, soluta.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab optio mollitia accusantium saepe magnam cumque reiciendis, doloremque similique enim laudantium odio at harum aliquam error voluptates voluptatem. Quod, soluta.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab optio mollitia accusantium saepe magnam cumque reiciendis, doloremque similique enim laudantium odio at harum aliquam error voluptates voluptatem. Quod, soluta.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab optio mollitia accusantium saepe magnam cumque reiciendis, doloremque similique enim laudantium odio at harum aliquam error voluptates voluptatem. Quod, soluta.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab optio mollitia accusantium saepe magnam cumque reiciendis, doloremque similique enim laudantium odio at harum aliquam error voluptates voluptatem. Quod, soluta.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab optio mollitia accusantium saepe magnam cumque reiciendis, doloremque similique enim laudantium odio at harum aliquam error voluptates voluptatem. Quod, soluta.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab optio mollitia accusantium saepe magnam cumque reiciendis, doloremque similique enim laudantium odio at harum aliquam error voluptates voluptatem. Quod, soluta.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab optio mollitia accusantium saepe magnam cumque reiciendis, doloremque similique enim laudantium odio at harum aliquam error voluptates voluptatem. Quod, soluta.</p>
+            <?php include_once('./../../fonction/presentationPublicationProfil.php');
+
+            $bdd5=connectionBDD();
+            $a=0; $b=10;
+            if(isset($_GET['a'],$_GET['b'])){
+                $a+=10; $b+=10;
+            }
+            $requete=$bdd5->query('SELECT postName FROM '.$_GET["id"].'post ORDER BY postName DESC LIMIT '.$a.','.$b.'');
+            while($result=$requete->fetch()){
+                presentationPublicationProfil($result['postName']);
+            }?>
             <nav>
 
             </nav>

@@ -30,7 +30,19 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
         if(isset($_GET['id']))
         {
             echo('<h1>'.pseudo($bdd,$_GET['id']).'</h1>');
-            $req=$bdd->query('SELECT * FROM '.BDname($_SESSION['id'],$_GET['id']).'');
+            
+            $req=$bdd->query('SELECT id FROM '.BDname($_SESSION['id'],$_GET['id']).' ORDER BY id DESC LIMIT 0,1 ');
+            $idMessage=($req->fetch())['id'];
+            
+            if(isset($_GET['idMessage']))
+                $idMessage=(int)$_GET['idMessage']-5;    
+            $messagelimit=0;
+            if($idMessage>5){
+                $messagelimit=$idMessage-5;
+                echo("<a href='./message.php?id=".$_GET['id']."&idMessage=".$idMessage."'>voir les anciens messages</a>");
+            }
+            $req->closeCursor();
+            $req=$bdd->query('SELECT * FROM '.BDname($_SESSION["id"],$_GET["id"]).' ORDER BY id LIMIT '.$messagelimit.','.$idMessage.'');
             while($donne=$req->fetch())
             {
                 

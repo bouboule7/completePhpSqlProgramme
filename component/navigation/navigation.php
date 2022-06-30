@@ -12,7 +12,7 @@ include("./../../fonction/connectionBDD.php");
 </div>
 <div class="navigation">
     <div class="alien">
-        <a href="./../accueil/accueil.php">acceuil</a>
+        <a href="./../accueil/accueil.php">accueil</a>
         <a href="./../message/message.php">message</a>
         <a href="./../contact/contact.php">contact</a>
         <a href="./../menu/menu.php">menu</a>

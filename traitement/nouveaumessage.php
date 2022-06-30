@@ -6,7 +6,7 @@
     include("./../fonction/temps.php");
     echo($_SESSION['id'].$_GET['id']);
     $bdd=connectionBDD();
-    $req=$bdd->prepare('INSERT INTO '.BDname($_SESSION['id'],$_GET['id']).' VALUES (:pseudo, :message, :jour, :temps)');
+    $req=$bdd->prepare('INSERT INTO '.BDname($_SESSION['id'],$_GET['id']).'(pseudo, message, jour, temps) VALUES (:pseudo, :message, :jour, :temps)');
     $req->execute(array('pseudo'=>pseudo($bdd,$_SESSION['id']),
                         'message'=>$_POST['nouveaumessage'],
                         'jour'=>jour(),

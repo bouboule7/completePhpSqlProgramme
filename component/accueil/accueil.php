@@ -28,7 +28,7 @@ include_once("./../../traitement/image.php");
             <form action="./../../traitement/publicationText.php" method="post">
                 <textarea placeholder="nouvelle publication" name="publication" class="publicationZone" rows="5" cols="30"></textarea>
                 <button type="submit">Publier</button>  <br/>
-                <a href=./../newPublicationPhoto/newPublicationPhoto.php"">joindre des photos </a>
+                <a href="./../newPublicationPhoto/newPublicationPhoto.php">joindre des photos </a>
             </form>
         </div>
     </div>

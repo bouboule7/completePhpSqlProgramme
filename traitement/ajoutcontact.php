@@ -27,7 +27,7 @@ $bdd=connectionBDD();
                         'nouveau'=>$non));
     $req->closeCursor();
     
-    $req = $bdd->query('CREATE TABLE '.BDname($_SESSION['id'],$nomamis).' (pseudo text, message text, jour date, temps time)');
+    $req = $bdd->query('CREATE TABLE '.BDname($_SESSION['id'],$nomamis).' (id int AUTO_INCREMENT,pseudo text, message text, jour date, temps time)');
     $req->closeCursor();
     header('Location: ./../page/contact/contact.php');  
 ?>
