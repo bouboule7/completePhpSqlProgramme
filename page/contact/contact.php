@@ -12,7 +12,6 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
 <body>
 
     <?php 
-    include("./../../component/entete/entete.html"); 
     include_once("./../../fonction/pseudo.php");
     if($_SESSION['statue']==1){
         include("./../../component/navigation/navigation.php"); 

@@ -30,7 +30,7 @@ if($_SESSION['havemail']==0)
     while($donne=$req->fetch())
    {
                
-       if ($donne['motdepasse']==htmlspecialchars($_GET['password']))
+       if (password_verify($_GET['password'],$donne['motdepasse']))
             {
                 include_once('./../classe/User.class.php');
 

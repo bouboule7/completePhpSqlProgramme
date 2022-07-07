@@ -22,7 +22,6 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
     include('./../../fonction/pseudo.php');
     include('./../../fonction/BDname.php');
     
-    include("./../../component/entete/entete.html"); 
     if($_SESSION['statue']==1){
         include("./../../component/navigation/navigation.php"); 
 

@@ -20,7 +20,7 @@
         $req=$bdd->prepare('INSERT INTO '.$nomTable.' (id, contenueText,photo1,photo2, photo3, jour, heure, reactionA , reactionB ) VALUES (:id, :contenueText, :photo1, :photo2, :photo3, :jour, :heure, :reactionA , :reactionB)');
         $req->execute(array('id'=>$_SESSION['id'],
                             'contenueText'=>$_POST['publication'],
-                            "photo1"=>1,
+                            "photo1"=>0,
                             "photo2"=>0,
                             "photo3"=>0,
                             'jour'=>jour(),

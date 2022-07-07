@@ -1,9 +1,14 @@
 <link rel="stylesheet" href="./../../component/pied/pied.css">
-<div class="pied">
-    <a href="./../accueil/accueil.php">accueil</a>
-    <a href="./../message/message.php">message</a>
-    <a href="./../contact/contact.php">contact</a>
-    <a href="pageParamettre">Paramettre</a>
-    <a href="pageCondition">Codition d'utilisation</a>
-    <a class="deconnection" href="./../../traitement/deconnection.php">Deconnection</a>
+<div >
 </div>
+<footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a class="nav-link px-2 text-muted" href="./../accueil/accueil.php">Accueil</a></li>
+      <li class="nav-item"><a href="./../message/message.php" class="nav-link px-2 text-muted">Message</a></li>
+      <li class="nav-item"><a href="./../contact/contact.php"class="nav-link px-2 text-muted">Contact</a></li>
+      <li class="nav-item"><a href="./../pageParamettre.php" class="nav-link px-2 text-muted">Paramettre</a></li>
+      <li class="nav-item"><a href="pageCondition" class="nav-link px-2 text-muted">Condition d'utilisation</a></li>
+      <li class="nav-item"><a href="./../../traitement/deconnection.php" class="nav-link px-2 text-muted">Déconnexion</a></li>
+    </ul>
+    <p class="text-center text-muted">&copy; 2022 Company, Inc</p>
+  </footer>

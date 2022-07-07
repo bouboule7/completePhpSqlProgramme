@@ -11,7 +11,7 @@ body{
     height: max-content;
     border-bottom:1px solid white;
     width:100vw;
-    z-index: 1;
+    z-index: 1031;
 }
 .espacetete{
   flex:0.9;
