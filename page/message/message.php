@@ -10,7 +10,7 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
     <title>Message</title>
 </head>
 <body>
-
+<div class="message">
     <?php 
     function vous($nom,$session)
     {
@@ -25,8 +25,6 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
     if($_SESSION['statue']==1){
         include("./../../component/navigation/navigation.php"); 
         ?>
-<div class="message">
-<h3>Message <a class="actualiser" href="./message.php"><img class="actualiser" src="./../../assets/img/refresh.gif"/></a></h2>
 <?php
 $bdd=connectionBDD();
         if(isset($_GET['id']))
@@ -65,42 +63,89 @@ $bdd=connectionBDD();
 
             ?>
 
-
-        <div class="messageList">
-            <ul class="list-group">
-            <li class="list-group-item ">
-                <div class="d-flex justify-content-between align-items-center">
-                    Cras justo odio
-                    <span class="badge badge-primary badge-pill">14</span> 
-                </div>
-                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                <small class="date">3 days ago</small>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                Dapibus ac facilisis in
-                <span class="badge badge-primary badge-pill">2</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                Morbi leo risus
-                <span class="badge badge-primary badge-pill">1</span>
-            </li>
-        </ul>
-        </div>
-
-
+    <div class="enteteMessage">
+        <h3>Message <a class="actualiser" href="./message.php"><img class="actualiser" src="./../../assets/img/refresh.gif"/></a></h3>
+        <h5 class="btn btn-success">Lancer une nouvelle discussion</h5>
+    </div>
+        <p class="enteteMessage">
+            <form action="./lala.php" method="post">
+            <input class="cacher" name="lala" id="lala" type="text" value=" hello"/>
+            <button type="submit" class="btn-lien">Chercher une discussion</button>
+        </form>
+          <form class="d-flex mt-3 mt-lg-0" method="post" action="./../../page/recherche/recherche.php" role="search">
+            <input class="form-control me-2" name="recherche" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </p>
+            <div class="messageList">
+                <ul class="list-group">
+                <li class="list-group-item ">
+                    <div class="d-flex justify-content-between align-items-center">
+                        Cras justo odio
+                        <span class="badge badge-primary badge-pill">14</span> 
+                    </div>
+                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    <small class="date">3 days ago</small>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Dapibus ac facilisis in
+                    <span class="badge badge-primary badge-pill">2</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Morbi leo risus
+                    <span class="badge badge-primary badge-pill">1</span>
+                </li>
 
 <?php
+        
             $req=$bdd->query('SELECT * FROM '.$_SESSION["id"].'discussion');
             while($donne=$req->fetch()){
                 if($donne['nouveau']==1)
                     $class="nouveau";
                 else
                     $class="";
-                echo('<a class="'.$class.'" href="./../../traitement/messagevu.php?id='.$donne['nom_amis'].'">'.pseudo($bdd,$donne["nom_amis"]).'<br/></a>');
+            echo('<li class="justify-content-between align-items-center list-group-item ">
+                    <a class="'.$class.'" href="./../../traitement/messagevu.php?id='.$donne['nom_amis'].'">
+                        <div class="d-flex w-100 justify-content-between align-items-center">
+                        <div class="introMessage">
+                            <img class="photoDeProfilMessage rounded-circle" src="');
+                            $bdd2=connectionBDD();
+                            $req=$bdd2->query('SELECT * FROM '.$donne['nom_amis'].'photo ');
+                            $nombrePhotoProfil=0;
+                            while($donneImage=$req->fetch())
+                            {
+                                if($donneImage['type']=="profil"){
+                                    if($nombrePhotoProfil<$donneImage['photoId'])
+                                        $nombrePhotoProfil=$donneImage['photoId'];
+                                }
+                            }
+                                    if($nombrePhotoProfil==0) 
+                                        echo('./../../assets/img/profil.jpeg');
+                                    else{
+                                        echo('./../../traitement/image.php?id='.(string)$donne["nom_amis"].'&type=profil&photoId='.(string)$nombrePhotoProfil);
+                                        }
+                                                                                echo('" alt="photo de profil"/>
+        
+                                '.pseudo($bdd,$donne["nom_amis"]).'
+                        </div>
+                            <span class="badge badge-primary badge-pill">14</span> 
+                        </div>
+                        <div class="paragraphe">
+                            <p class="mb-1">Donec id elit non mi lore iezy  ezyrhid uia daui hahdu ady iauzruihaz porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                            <small class="date">3 days ago</small>
+                        </div>
+                    </a>
+                </li>');
             }
             $req->closeCursor();
         }
         ?>
+                </ul>
+            <form action="./message.php" method="post">
+                <input class="cacher" name="lala" id="lala" type="text" value=" hello"/>
+                <button type="submit" class="btn btn-outline-primary plus">Afficher plus de message</button>
+            </form>
+            </div>
 </div>
 <?php
 

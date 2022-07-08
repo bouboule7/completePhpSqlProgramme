@@ -1,7 +1,7 @@
 <?php
 session_start();
 $_SESSION['havemail']=false;
-$_SESSION['mail']=htmlspecialchars($_GET['mail']);
+$_SESSION['mail']=htmlspecialchars($_POST['mail']);
     
 include("./../fonction/connectionBDD.php");
 
@@ -11,7 +11,7 @@ include("./../fonction/connectionBDD.php");
     $req = $bdd->query('SELECT * FROM utilisateur');
    while($donne=$req->fetch())
    {
-       if($donne['mail']==htmlspecialchars($_GET['mail']))
+       if($donne['mail']==htmlspecialchars($_POST['mail']))
        {
         $_SESSION['havemail']=true;
        }

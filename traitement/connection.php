@@ -4,8 +4,8 @@ include('./../fonction/connectionBDD.php');
 
 $_SESSION['havemail']=1;
 
-if(htmlspecialchars($_GET['mail'])){
-    $_SESSION['mail']=htmlspecialchars($_GET['mail']);
+if(htmlspecialchars($_POST['mail'])){
+    $_SESSION['mail']=htmlspecialchars($_POST['mail']);
     $_SESSION['havemail']=0;
 }
 
@@ -30,7 +30,7 @@ if($_SESSION['havemail']==0)
     while($donne=$req->fetch())
    {
                
-       if (password_verify($_GET['password'],$donne['motdepasse']))
+       if (password_verify($_POST['password'],$donne['motdepasse']))
             {
                 include_once('./../classe/User.class.php');
 

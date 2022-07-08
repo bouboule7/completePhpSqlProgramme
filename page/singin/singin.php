@@ -21,7 +21,7 @@ if($_SESSION['statue']==1)
 
 <div class="login">
     <div class="espace"></div>
-    <form methode="post" action="./../../traitement/connection.php">
+    <form method="post" action="./../../traitement/connection.php">
         <h1>Sing As</h1>
         <br/>
         <label for="mail">E-mail</label>

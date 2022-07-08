@@ -21,7 +21,7 @@ if($_SESSION['statue']==1)
     <p>Veuillez remplir le formulaire suivant pour se registrer</p>
     <div class="singupform">
         <div class="espace"></div>
-        <form action="./../../traitement/enregistrement.php" methode="post">
+        <form action="./../../traitement/enregistrement.php" method="post">
         <div class="blok">
             <div class="eespace"></div>
             <label for="nom">Nom:</label>

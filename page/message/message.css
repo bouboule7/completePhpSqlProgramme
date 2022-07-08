@@ -24,15 +24,12 @@
     background-color:#0000007d;
 }
 .message{
-    margin-top:100px ;
-}
-.messageList{
     width: 100vw;
-    margin: auto;
+    margin: 80px auto auto;
 }
 
 @media (min-width: 1200px) {
-    .messageList{
+    .message{
         width: 60vw;
     }
 }
@@ -45,4 +42,33 @@
 
 img{
     width: 30px;
+}
+.message .introMessage{
+    width: 100%;
+    display: flex;
+}
+.message .introMessage:hover{
+    color: rgba(0, 51, 255, 0.987);
+}
+.enteteMessage{
+    display: flex;
+    justify-content: space-between;
+}
+.photoDeProfilMessage{
+    width: 35px;
+    margin-right: 20px;
+}
+.list-group-item a{
+    text-decoration: none;
+    color: black;
+}
+.paragraphe{
+    display: flex;
+    justify-content: space-between;
+}
+.mb-1{
+    width: 90%;
+}
+.plus{
+    margin-top: 20px;
 }

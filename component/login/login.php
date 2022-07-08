@@ -3,7 +3,7 @@ include("./../../component/sing/sing.html");
 ?>
 <link rel="stylesheet" href="./../../component/login/login.css"/>
 <div class="login">
-    <form methode="post" action="./../../traitement/mail.php">
+    <form method="post" action="./../../traitement/mail.php">
         <h1 class="start">Start with Joov'Teck</h1>
         <br/>
         <label class="labemail" for="mail">E-mail</label>
