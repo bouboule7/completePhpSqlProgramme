@@ -24,8 +24,11 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
     
     if($_SESSION['statue']==1){
         include("./../../component/navigation/navigation.php"); 
-
-        $bdd=connectionBDD();
+        ?>
+<div class="message">
+<h3>Message <a class="actualiser" href="./message.php"><img class="actualiser" src="./../../assets/img/refresh.gif"/></a></h2>
+<?php
+$bdd=connectionBDD();
         if(isset($_GET['id']))
         {
             echo('<h1>'.pseudo($bdd,$_GET['id']).'</h1>');
@@ -59,6 +62,34 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
             <?php
         }
         else{
+
+            ?>
+
+
+        <div class="messageList">
+            <ul class="list-group">
+            <li class="list-group-item ">
+                <div class="d-flex justify-content-between align-items-center">
+                    Cras justo odio
+                    <span class="badge badge-primary badge-pill">14</span> 
+                </div>
+                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                <small class="date">3 days ago</small>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Dapibus ac facilisis in
+                <span class="badge badge-primary badge-pill">2</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Morbi leo risus
+                <span class="badge badge-primary badge-pill">1</span>
+            </li>
+        </ul>
+        </div>
+
+
+
+<?php
             $req=$bdd->query('SELECT * FROM '.$_SESSION["id"].'discussion');
             while($donne=$req->fetch()){
                 if($donne['nouveau']==1)
@@ -69,6 +100,9 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
             }
             $req->closeCursor();
         }
+        ?>
+</div>
+<?php
 
         include('./../../component/pied/pied.php');
     }

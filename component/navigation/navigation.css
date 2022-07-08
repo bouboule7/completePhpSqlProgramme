@@ -125,3 +125,8 @@ nav{
     position: absolute;
     border-bottom: 2px solid black;
 }
+
+.badge{
+  background-color: red;
+  margin-left: 5px;
+}

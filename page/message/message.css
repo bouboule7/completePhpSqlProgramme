@@ -23,3 +23,26 @@
     width:60vw;
     background-color:#0000007d;
 }
+.message{
+    margin-top:100px ;
+}
+.messageList{
+    width: 100vw;
+    margin: auto;
+}
+
+@media (min-width: 1200px) {
+    .messageList{
+        width: 60vw;
+    }
+}
+.mb-1{
+    font-size: 14px;
+}
+.date{
+    font-size: 10px;
+}
+
+img{
+    width: 30px;
+}

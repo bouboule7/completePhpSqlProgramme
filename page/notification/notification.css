@@ -1,0 +1,22 @@
+.notification{
+    width: 70vw;
+    margin: 60px auto 0px;
+}
+@media (max-width: 1200px) {
+    .notification{
+        width: 100vw;
+    }
+}
+.list-group-item {
+    height: 60px;
+    background-color: rgba(220, 220, 220, 0.37);
+}
+h5{
+    font-size: 14px;
+}
+p{
+    font-size: 12px;
+}
+.actualiser{
+  width: 30px;
+}

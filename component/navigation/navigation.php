@@ -22,7 +22,7 @@ include("./../../fonction/connectionBDD.php");
               <a class="nav-link" href="./../message/message.php">Message<span class="badge rounded-pill badge-light">4</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Notifications<span class="badge rounded-pill badge-light">4</span></a>
+              <a class="nav-link" href="./../notification/notification.php">Notifications<span class="badge rounded-pill badge-light">4</span></a>
             </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./../contact/contact.php">Contact<span class="badge rounded-pill badge-light">4</span></a>
