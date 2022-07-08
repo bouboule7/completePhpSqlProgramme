@@ -12,18 +12,27 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
 <body>
 
     <?php 
-
-    include("./../../component/entete/entete.html"); 
     if($_SESSION['statue']==1){
         include("./../../component/navigation/navigation.php"); 
         ?>
-        <div class="profil">
-            <div class="marge"></div>
-            <a href="./../profil/profil.php?id=<?php echo($_SESSION['id']);?>">Voir le profil</a>
-            <div class="marge"></div>
+        <div class="menu">
+            <h3>Menu</h3>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="./../profil/profil.php?id=<?php echo($_SESSION['id']);?>">Voir le profil</a></li>
+                <li class="list-group-item"><a href="./../accueil/accueil.php">Accueil</a></li>
+                <li class="list-group-item"><a href="./../message/message.php">Message</a></li>
+                <li class="list-group-item"><a href="./../notification/notification.php">Notification</a></li>
+                <li class="list-group-item"><a href="./../contact/contact.php">Contact</a></li>
+                <li class="list-group-item"><a href=#">Setting</a></li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item"><a href="#"><img src="./../../assets/img/help.gif"/>Aide et Question</a></li>
+                <li class="list-group-item"><a href="#"><img src="./../../assets/img/setting.gif"/> Paramettre</a></li>
+                <li class="list-group-item"><a href="#">Condition d'utilisation</a></li>
+                <li class="list-group-item logout"><a href="#"><img src="./../../assets/img/logout.gif"/> Se déconnecter</a></li>
+            </ul>
         </div>
-        </div>
-
         <?php
         include('./../../component/pied/pied.php');
     }

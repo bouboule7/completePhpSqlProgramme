@@ -19,7 +19,7 @@ if((htmlspecialchars($_GET['password']))==(htmlspecialchars($_GET['password2']))
     $req = $bdd->prepare('INSERT INTO utilisateur( mail,motdepasse,pseudo) VALUES( :mail, :motdepasse, :pseudo)');
     $req->execute(array(
                 'mail' => htmlspecialchars($_GET['mail']),
-                'motdepasse' => htmlspecialchars($_GET['password']),
+                'motdepasse' => password_hash(htmlspecialchars($_GET['password']), PASSWORD_BCRYPT),
                 'pseudo' => htmlspecialchars($_GET['nom']." ".$_GET['prenom'])
     ));
     
