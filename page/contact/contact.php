@@ -14,17 +14,7 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
     <?php 
     include_once("./../../fonction/pseudo.php");
     if($_SESSION['statue']==1){
-        include("./../../component/navigation/navigation.php"); 
-        include_once("./../../fonction/connectionBDD.php");
-        include_once("./../../fonction/presentationcourt.php");
-        $bdd=connectionBDD();
-        $req=$bdd->query('SELECT * FROM '.$_SESSION["id"].'discussion ');
-        while($donne=$req->fetch())
-        {
-           echo('<p>'.presentationcourt($donne["nom_amis"]).'</p>');
-        }
-    
-        include('./../../component/pied/pied.php');
+        include("./../../component/contact/contact.php");
     }
     else{
         include("./../../component/denied/denied.php");
