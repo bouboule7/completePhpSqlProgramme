@@ -1,15 +1,14 @@
 <?php
-    function presentationcourt($id){
+    function presentationcourt2($id){
         $amis=0;
         $bdd2=connectionBDD();
         $req1=$bdd2->query('SELECT * FROM '.$id.'table ');
         $donne1=$req1->fetch();
 
 ?>
-        <div class="col-md-auto">
-            <div class="card shadow-sm  justify-content-between align-items-center">
+         <div class="d-flex text-muted pt-3">
                 <?php
-                echo('<img class="imgContact" src=');
+                echo('<img class="bd-placeholder-img flex-shrink-0 me-2 rounded imgAmis" src=');
                             $bdd2=connectionBDD();
                             $req=$bdd2->query('SELECT * FROM '.$id.'photo ');
                             $nombrePhotoProfil=0;
@@ -27,24 +26,10 @@
                               }
                                                                               echo(' alt="photo de profil"/>');
                 ?>
-              <div class="card-body">
-                <p class="card-text"><a <?php echo('href="./../../page/profil/profil.php?id='.$id.'">'); echo(pseudo($bdd2,$id)); ?></a></p>
-                <div>
-                    <p><small class="text-muted">de <?php echo($donne1['pays']);?></small></p>
-                  <div class="btn-group">
-                    <form action="./../traitement/ajoutcontact.php" method="post">
-                      <input type="hidden" name="id" value= <?php echo('"'.$id.'"') ?> />
-                      <button type="submit" class="btn  btn-outline-success">Ajouter</button>
-                    </form>
-                    <form>
-                      <button type="button" class="btn  btn-outline-primary">Profil</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
+                <p class=" mb-0 small lh-sm border-bottom">
+                    <strong class="d-block text-gray-dark">@<a <?php echo('href="./../../page/profil?id='.$id.'">'); echo(pseudo($bdd2,$id)); ?></a></strong>
+                    de <?php echo($donne1['pays']);?> </p>
         </div>
-       
 <?php
   }
 ?>

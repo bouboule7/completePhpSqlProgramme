@@ -42,14 +42,14 @@ class Compte{
         $req->execute(array(
             'titre'=>"JoovTeck",
             'contenue'=>"Bonjour, votre enregistrement a Joovteck a été un succes. Merci d utiliser JoovTeck",
-            'lien'=>'./../accueil',
+            'lien'=>'./accueil',
             'jour'=>jour(),
             'heure'=> temps(),
             'vue'=>true));
         $req->execute(array(
             'titre'=>"JoovTeck",
             'contenue'=>"Metter a jour votre profil pour que les autre puisse vous reconnaitre",
-            'lien'=>'./../profil',
+            'lien'=>'./profil?id='.$_SESSION['id'],
             'jour'=>jour(),
             'heure'=> temps(),
             'vue'=>true));

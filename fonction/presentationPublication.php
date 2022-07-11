@@ -41,7 +41,7 @@
               <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="./../../assets/img/couverture.jpeg" class="bd-placeholder-img d-block card-img-top " alt="...">
+                    <img src="./../assets/img/couverture.jpeg" class="bd-placeholder-img d-block card-img-top " alt="...">
                   </div>
                   <div class="carousel-item">
                     <img  class="bd-placeholder-img d-block card-img-top" src="<?php 
@@ -64,7 +64,7 @@
 
               <div class="card-body">
                 <h5 class="card-title"><?php echo($donner['contenueText']);?></h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Legende blablabla , legende blablabla.</p>
               </div>
             </div>
             <a href="#" class="btn btn-outline-danger btn-danger"><img class="react" src="./../../assets/img/love.gif"/<span class="badge rounded-pill badge-light"><span class="badge rounded-pill badge-light">5</span></a>

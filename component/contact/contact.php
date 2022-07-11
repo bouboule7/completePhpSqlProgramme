@@ -4,6 +4,7 @@ session_start();
     include("./../../component/navigation/navigation.php"); 
     include_once("./../../fonction/connectionBDD.php");
     include_once("./../../fonction/presentationcourt.php");
+    include_once("./../../fonction/presentationcourt2.php");
 ?>
 
 <h3 class="contact">Contact <a class="actualiser" href="./contact"><img class="actualiser" src="./../../assets/img/refresh.gif"/></a></h3>
@@ -12,65 +13,34 @@ session_start();
             <button class="btn voir-tout btn-outline-primary w-50">Voir tout les amis dans le contact</button>
             <?php
             $bdd=connectionBDD();
-            $req=$bdd->query('SELECT * FROM '.$_SESSION["id"].'discussion ');
-            while($donne=$req->fetch())
+            $req=$bdd->query('SELECT * FROM '.$_SESSION["id"].'contact');
+            $listeAmis=array();
+            while($contact=$req->fetch())
             {
-               echo(presentationcourt($donne["nom_amis"]));
+                array_unshift($listeAmis,$contact['id_amis']);
             }
+            $req->closeCursor();
+            $req2=$bdd->query('SELECT * FROM utilisateur ');
+            while($donne=$req2->fetch())
+            {
+                if(!in_array($donne["id"],$listeAmis))
+                   presentationcourt($donne["id"]);
+            }
+            $req->closeCursor();
             ?>
         </div>
-
-
-
-<?php
-/*  $req1->closeCursor();
-  
-  if($id==$_SESSION['id'])
-      return('<a href="./../../profil">Vous</a>');
-
-  $req2=$bdd2->query('SELECT * FROM '.$id.'contact  ');
-      while($donne2=$req2->fetch())
-     {
-         if($donne2['id_amis']==$_SESSION['id'])
-         {
-          $amis=1;
-         }
-     }   
-     $req2->closeCursor();
-  if($amis==0)
-         return('<a href="./../../traitement/ajoutcontact.php?amis='.$id.'">Ajouter</a>');
-  else
-         return('<a href="./../../page/message?id='.$id.'">Message</a>');
-*/
-?>
 
 
         <div class="col-md-3 themed-grid-col">
             <div class="my-3 p-3 bg-body rounded shadow-sm">
                 <button class="btn voir-tout btn-outline-primary ">Voir tout les amis dans le contact</button>
-                <div class="d-flex text-muted ">
-                  <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
-            
-                  <p class=" mb-0 small lh-sm border-bottom">
-                    <strong class="d-block text-gray-dark">@username</strong>
-                    Some representative </p>
-                </div>
-                <div class="d-flex text-muted pt-3">
-                  <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#e83e8c"/><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text></svg>
-            
-                  <p class=" mb-0 small lh-sm border-bottom">
-                    <strong class="d-block text-gray-dark">@username</strong>
-                    Some more repres</p>
-                </div>
-                <div class="d-flex text-muted pt-3">
-                  <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6f42c1"/><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text></svg>
-            
-                  <p class=" mb-0 small lh-sm border-bottom">
-                    <strong class="d-block text-gray-dark">@username</strong>
-                    This user also gets</p>
-                </div>
+<?php
+            for ($i=0;$i<=7;$i++) {
+                presentationcourt2($listeAmis[$i]);
+            }
+?>      
                 <small class="d-block text-end mt-3">
-                  <a href="#">All updates</a>
+                  <a href="#">Tous les amis</a>
                 </small>
             </div>
     </div>

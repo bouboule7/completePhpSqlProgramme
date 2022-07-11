@@ -16,6 +16,7 @@
 @media (max-width:1200px){
     .card{
         flex-direction: row;
+        width: 70vw
     }
     .imgContact{
         margin-left: 10%;
@@ -28,6 +29,9 @@
 .imgContact{
     width: 225px;
     height: 180px;
+}
+.imgAmis{
+    width: 40px;
 }
 .col{
     width: max-content;

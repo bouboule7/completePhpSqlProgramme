@@ -103,7 +103,7 @@ include_once("./../../traitement/image.php");
           <button type="submit" class="btn btn-outline-danger">Publier</button>
         </div>
       </form>
-      <a class="link-success" href="./../newPublicationPhoto">Joindre des photo</a>
+      <a class="link-success" href="./newPublicationPhoto">Joindre des photo</a>
     </div>
   </div>
     <?php
