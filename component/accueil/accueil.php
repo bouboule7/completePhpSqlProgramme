@@ -88,7 +88,7 @@ include_once("./../../traitement/image.php");
 </aside>
 <div class="bd-cheatsheet container-fluid ">
   <section id="content" >
-      <h2 class=" actu sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Actualité <a class="actualiser" href="./accueil.php"><img class="actualiser" src="./../../assets/img/refresh.gif"/></a></h2>
+      <h2 class=" actu sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Actualité <a class="actualiser" href="./accueil"><img class="actualiser" src="./../../assets/img/refresh.gif"/></a></h2>
   <div class="newPubBloc">
         <img  class="photoDeProfilNewPublication" src="<?php
                         if($nombrePhotoProfil==0) 
@@ -103,7 +103,7 @@ include_once("./../../traitement/image.php");
           <button type="submit" class="btn btn-outline-danger">Publier</button>
         </div>
       </form>
-      <a class="link-success" href="./../newPublicationPhoto/newPublicationPhoto.php">Joindre des photo</a>
+      <a class="link-success" href="./../newPublicationPhoto">Joindre des photo</a>
     </div>
   </div>
     <?php

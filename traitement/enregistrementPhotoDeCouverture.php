@@ -9,7 +9,7 @@ $bdd=connectionBDD();
     $image_size = $_FILES["photoDeProfil"]["size"];
     $image_type = $_FILES["photoDeProfil"]["type"];
     if($image_size>500000)    
-        header('Location: ./../page/modifierCouverture/modifierCouverture.php');
+        header('Location: ./../page/modifierCouverture');
     // ajout dans la table:
     $req=$bdd->prepare("INSERT INTO ".$_SESSION['id']."photo (type, donneBinaire,nomImage,typeimage)VALUES (:type, :donneBinaire,:nomImage,:typeimage)");
     $req->execute(array('type'=>"couverture",
@@ -47,5 +47,5 @@ $bdd=connectionBDD();
 
 
 
-    header('Location: ./../page/profil/profil.php?id='.$_SESSION["id"]);
+    header('Location: ./../page/profil?id='.$_SESSION["id"]);
 ?>

@@ -17,7 +17,6 @@ class User
         $donne=$req->fetch();
         $_SESSION['id']=$donne['id'];
         $_SESSION['pseudo']=$donne['pseudo'];
-        $_SESSION['motdepasse']=$donne['motdepasse'];
 
         $req->closeCursor();
         if($oui!=1){

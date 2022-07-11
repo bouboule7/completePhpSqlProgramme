@@ -9,17 +9,19 @@ include_once('./../../fonction/pseudo.php');
 <?php
 $bdd5=connectionBDD();
 $a=0; $b=20;
-if(isset($_GET['a'],$_GET['b'])){
+if(isset($_POST['a'],$_POST['b'])){
     $a+=20; $b+=20;
 }
 $requete=$bdd5->query('SELECT publicationId FROM publication ORDER BY publicationId DESC LIMIT '.$a.','.$b.'');
 while($result=$requete->fetch()){
     presentationPublication($result['publicationId']);
 }
-    echo('<a href="./accueil.php?a='.$a.'&b='.$b.'">Afficher plus d\'actualité</a>');
 ?>
-
-
+    <form method="post" action="./accueil">
+        <input type="hidden" name="a" value=    <?php echo('"'.$a.'"');  ?>/>
+        <input type="hidden" name="b" value=    <?php echo('"'.$b.'"');  ?>/>
+        <button type="submit" class="btn-lien link-primary"> Afficher plus d'actualité</button>
+    </form>
 
 </section>
 </div>

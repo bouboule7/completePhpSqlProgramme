@@ -10,7 +10,7 @@
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         
         <a class="d-flex align-items-center link-darkphp -S"
-     <?php echo("href='./../profil/profil.php?id=".$donner['id']."'><h4>".pseudo($bdd6,$donner["id"]));?></h4></a>
+     <?php echo("href='./profil?id=".$donner['id']."'><h4>".pseudo($bdd6,$donner["id"]));?></h4></a>
       </div>
 
       <div class="bd-example-snippet bd-code-snippet">

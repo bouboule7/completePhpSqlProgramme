@@ -9,7 +9,7 @@ $bdd=connectionBDD();
     $image_size = $_FILES["photo1"]["size"];
     $image_type = $_FILES["photo1"]["type"];
     if($image_size>50000)    
-        header('Location: ./../page/newPublicationPhoto/newPublicationPhoto.php');
+        header('Location: ./../page/newPublicationPhoto');
 
     $req=$bdd->query('SELECT photoId FROM '.$_SESSION["id"].'photo ORDER BY photoId DESC LIMIT 0,1 ');
     $idPhoto=($req->fetch())['photoId'];
@@ -49,5 +49,5 @@ $bdd=connectionBDD();
 
 
 
-    header('Location: ./../page/accueil/accueil.php');
+    header('Location: ./../page/accueil');
 ?>

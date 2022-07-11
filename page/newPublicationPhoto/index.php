@@ -32,7 +32,7 @@ if($_SESSION['statue']==1){
             </form>
         </div>
         <br/>
-        <a href="./../accueil/accueil.php">Retourner a l'accueil</a>
+        <a href="./../accueil">Retourner a l'accueil</a>
     <?php
     include('./../../component/pied/pied.php');
 }

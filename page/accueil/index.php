@@ -19,6 +19,6 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
             include("./../../component/login/login.php");
         }
     ?>
-<script src="./accueil.js"></script>
+<script src="./accueil/accueil.js"></script>
 </body>
 </html>

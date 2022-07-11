@@ -6,7 +6,7 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./message.css">
+    <link rel="stylesheet" href="./message/message.css">
     <title>Message</title>
 </head>
 <body>
@@ -27,29 +27,29 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
         ?>
 <?php
 $bdd=connectionBDD();
-        if(isset($_GET['id']))
+        if(isset($_POST['id']))
         {
-            echo('<h1>'.pseudo($bdd,$_GET['id']).'</h1>');
+            echo('<h1>'.pseudo($bdd,$_POST['id']).'</h1>');
             
-            $req=$bdd->query('SELECT id FROM '.BDname($_SESSION['id'],$_GET['id']).' ORDER BY id DESC LIMIT 0,1 ');
+            $req=$bdd->query('SELECT id FROM '.BDname($_SESSION['id'],$_POST['id']).' ORDER BY id DESC LIMIT 0,1 ');
             $idMessage=($req->fetch())['id'];
             
-            if(isset($_GET['idMessage']))
-                $idMessage=(int)$_GET['idMessage']-5;    
+            if(isset($_POST['idMessage']))
+                $idMessage=(int)$_POST['idMessage']-5;    
             $messagelimit=0;
             if($idMessage>5){
                 $messagelimit=$idMessage-5;
-                echo("<a href='./message.php?id=".$_GET['id']."&idMessage=".$idMessage."'>voir les anciens messages</a>");
+                echo("<a href='./?id=".$_POST['id']."&idMessage=".$idMessage."'>voir les anciens messages</a>");
             }
             $req->closeCursor();
-            $req=$bdd->query('SELECT * FROM '.BDname($_SESSION["id"],$_GET["id"]).' ORDER BY id LIMIT '.$messagelimit.','.$idMessage.'');
+            $req=$bdd->query('SELECT * FROM '.BDname($_SESSION["id"],$_POST["id"]).' ORDER BY id LIMIT '.$messagelimit.','.$idMessage.'');
             while($donne=$req->fetch())
             {
                 
                 echo('<div class="blocmessage '.vous(pseudo($bdd,$_SESSION['id']),$donne['pseudo']).'">'.$donne["pseudo"].'<br/>'.$donne["jour"].' '.$donne["temps"].'<br/>'.$donne["message"].'</div>');
             }
             ?>
-            <form action="./../../traitement/nouveaumessage.php?id=<?php echo($_GET['id']); ?>" method="post">
+            <form action="./../../traitement/nouveaumessage.php?id=<?php echo($_POST['id']); ?>" method="post">
                 <label for="message">Nouvelle message:</label>
                 <br/>
                 <textarea required name="nouveaumessage" class="nouveaumessage" rows="5" ></textarea>
@@ -64,7 +64,7 @@ $bdd=connectionBDD();
             ?>
 
     <div class="enteteMessage">
-        <h3>Message <a class="actualiser" href="./message.php"><img class="actualiser" src="./../../assets/img/refresh.gif"/></a></h3>
+        <h3>Message <a class="actualiser" href="./message"><img class="actualiser" src="./../../assets/img/refresh.gif"/></a></h3>
         <h5 class="btn btn-success">Lancer une nouvelle discussion</h5>
     </div>
         <p class="enteteMessage">
@@ -72,7 +72,7 @@ $bdd=connectionBDD();
             <input class="cacher" name="lala" id="lala" type="text" value=" hello"/>
             <button type="submit" class="btn-lien">Chercher une discussion</button>
         </form>
-          <form class="d-flex mt-3 mt-lg-0" method="post" action="./../../page/recherche/recherche.php" role="search">
+          <form class="d-flex mt-3 mt-lg-0" method="post" action="./../../page/recherche" role="search">
             <input class="form-control me-2" name="recherche" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
@@ -141,8 +141,8 @@ $bdd=connectionBDD();
         }
         ?>
                 </ul>
-            <form action="./message.php" method="post">
-                <input class="cacher" name="lala" id="lala" type="text" value=" hello"/>
+            <form action="./message" method="post">
+                <input type="hidden" name="lala" id="lala" value=" hello"/>
                 <button type="submit" class="btn btn-outline-primary plus">Afficher plus de message</button>
             </form>
             </div>

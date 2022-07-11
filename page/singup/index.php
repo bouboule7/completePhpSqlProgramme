@@ -1,7 +1,7 @@
 <?php
 session_start();//ceci est a fin de pouvoir utiliser des variables de sessions globales dans tout l'appli
 if($_SESSION['statue']==1)
-    header('Location: ./../accueil/accueil.php');
+    header('Location: ./../accueil');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@ if($_SESSION['statue']==1)
 </head>
 <body>
 
-<link rel="stylesheet" href="./singup.css">
+<link rel="stylesheet" href="./singup/singup.css">
     <?php 
     include("./../../component/entete/entete.html"); 
     include("./../../component/sing/sing.html");
@@ -40,11 +40,11 @@ if($_SESSION['statue']==1)
             <br/>
             <input type="number" name="numero" id="numero" class="numero" required/>
             <br/>
-            <label for="password" class="<?php if($_GET['motdp']) echo('rouge');?>">Mot de passe: </label>
+            <label for="password" class="<?php if($_POST['motdp']) echo('rouge');?>">Mot de passe: </label>
             <br/>
             <input type="password" name="password" id="password" class="password" required/>
             <br/>
-            <label for="password2" class="<?php if($_GET['motdp']) echo('rouge');?>">Confirmer le mot de passe:</label>
+            <label for="password2" class="<?php if($_POST['motdp']) echo('rouge');?>">Confirmer le mot de passe:</label>
             <br/>
             <input type="password" name="password2" id="password2" class="password2" required/>
             <br/>

@@ -28,5 +28,5 @@
                             'reactionA'=>0,
                             'reactionB'=>0  ));
     }
-       header('Location: ./../page/accueil/accueil.php'); 
+       header('Location: ./../page/accueil'); 
 ?>

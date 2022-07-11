@@ -21,7 +21,7 @@ include("./../fonction/connectionBDD.php");
    $req->closeCursor();
    
    if($_SESSION['havemail']==true)
-        header('Location: ./../page/singin/singin.php');
+        header('Location: ./../page/singin');
    else
-       header('Location: ./../page/singup/singup.php'); 
+       header('Location: ./../page/singup'); 
  ?>

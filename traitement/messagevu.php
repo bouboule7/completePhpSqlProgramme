@@ -9,9 +9,9 @@ $bdd=connectionBDD();
 
 $req=$bdd->prepare('UPDATE '.$_SESSION["id"].'discussion SET nouveau = :new WHERE nom_amis = :nomamis');
 $req->execute(array('new'=>0,
-                    'nomamis'=>$_GET["id"]));
+                    'nomamis'=>$_POST["id"]));
 $req->closeCursor();
 
-header('Location: ./../page/message/message.php?id='.$_GET["id"]);
+header('Location: ./../page/message/message.php?id='.$_POST["id"]);
 
 ?>

@@ -16,24 +16,24 @@ include("./../../fonction/connectionBDD.php");
           <h2>Joov'Teck</h2>
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="./../accueil/accueil.php">Accueil</a>
+              <a class="nav-link " aria-current="page" href="./accueil">Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./../message/message.php">Message<span class="badge rounded-pill badge-light">4</span></a>
+              <a class="nav-link" href="./message">Message<span class="badge rounded-pill badge-light">4</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./../notification/notification.php">Notifications<span class="badge rounded-pill badge-light">4</span></a>
+              <a class="nav-link" href="./notification">Notifications<span class="badge rounded-pill badge-light">4</span></a>
             </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./../contact/contact.php">Contact<span class="badge rounded-pill badge-light">4</span></a>
+                  <a class="nav-link" href="./contact">Contact<span class="badge rounded-pill badge-light">4</span></a>
                 </li>
             <li class="nav-item">
-                    <a class="nav-link" href="./../menu/menu.php">Menu</a>
+                    <a class="nav-link" href="./menu">Menu</a>
             </li>
             
             
           </ul>
-          <form class="d-flex mt-3 mt-lg-0" method="post" action="./../../page/recherche/recherche.php" role="search">
+          <form class="d-flex mt-3 mt-lg-0" method="post" action="./../../page/recherche" role="search">
             <input class="form-control me-2" name="recherche" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>

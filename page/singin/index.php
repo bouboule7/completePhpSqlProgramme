@@ -1,7 +1,7 @@
 <?php
 session_start();//ceci est a fin de pouvoir utiliser des variables de sessions globales dans tout l'appli
 if($_SESSION['statue']==1)
-    header('Location: ./../accueil/accueil.php');
+    header('Location: ./../accueil');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@ if($_SESSION['statue']==1)
 </head>
 <body>
 
-<link rel="stylesheet" href="./singin.css">
+<link rel="stylesheet" href="./singin/singin.css">
     <?php 
     include("./../../component/entete/entete.html"); 
     include("./../../component/sing/sing.html");
@@ -35,7 +35,7 @@ if($_SESSION['statue']==1)
         <br/>
         <input type="password" name="password" id="password" class="password" required/>
         <br/>
-        <a href="./../../page/singup/singup.php">Pas encore de compte?</a>
+        <a href="./../../page/singup">Pas encore de compte?</a>
         <br/>
         <button type="submit">Se connecter</button>
     </form>

@@ -6,7 +6,7 @@ session_start();
     include_once("./../../fonction/presentationcourt.php");
 ?>
 
-<h3 class="contact">Contact <a class="actualiser" href="./contact.php"><img class="actualiser" src="./../../assets/img/refresh.gif"/></a></h3>
+<h3 class="contact">Contact <a class="actualiser" href="./contact"><img class="actualiser" src="./../../assets/img/refresh.gif"/></a></h3>
     <div class="row mb-3">
         <div class="row contenuContact row-cols-1 col-md-9 themed-grid-col d-gridrow-cols-sm-3 row-cols-md-4 col-md-4 g-4">
             <button class="btn voir-tout btn-outline-primary w-50">Voir tout les amis dans le contact</button>
@@ -26,7 +26,7 @@ session_start();
 /*  $req1->closeCursor();
   
   if($id==$_SESSION['id'])
-      return('<a href="./../../profil/profil.php">Vous</a>');
+      return('<a href="./../../profil">Vous</a>');
 
   $req2=$bdd2->query('SELECT * FROM '.$id.'contact  ');
       while($donne2=$req2->fetch())
@@ -40,7 +40,7 @@ session_start();
   if($amis==0)
          return('<a href="./../../traitement/ajoutcontact.php?amis='.$id.'">Ajouter</a>');
   else
-         return('<a href="./../../page/message/message.php?id='.$id.'">Message</a>');
+         return('<a href="./../../page/message?id='.$id.'">Message</a>');
 */
 ?>
 

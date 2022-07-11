@@ -44,5 +44,5 @@ $bdd=connectionBDD();
 
 
 
-    header('Location: ./../page/profil/profil.php?id='.$_SESSION["id"]);
+    header('Location: ./../page/profil?id='.$_SESSION["id"]);
 ?>

@@ -48,7 +48,7 @@ include_once('./../../fonction/pseudo.php');
 
             $bdd5=connectionBDD();
             $a=0; $b=10;
-            if(isset($_GET['a'],$_GET['b'])){
+            if(isset($_POST['a'],$_POST['b'])){
                 $a+=10; $b+=10;
             }
             $requete=$bdd5->query('SELECT postName FROM '.$_SESSION["id"].'post ORDER BY postName DESC LIMIT '.$a.','.$b.'');
@@ -89,10 +89,10 @@ include_once('./../../fonction/pseudo.php');
 
             $bdd5=connectionBDD();
             $a=0; $b=10;
-            if(isset($_GET['a'],$_GET['b'])){
+            if(isset($_POST['a'],$_POST['b'])){
                 $a+=10; $b+=10;
             }
-            $requete=$bdd5->query('SELECT postName FROM '.$_GET["id"].'post ORDER BY postName DESC LIMIT '.$a.','.$b.'');
+            $requete=$bdd5->query('SELECT postName FROM '.$_POST["id"].'post ORDER BY postName DESC LIMIT '.$a.','.$b.'');
             while($result=$requete->fetch()){
                 presentationPublicationProfil($result['postName']);
             }?>

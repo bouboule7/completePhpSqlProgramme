@@ -21,29 +21,26 @@ if(htmlspecialchars($_POST['mail'])){
     $req->closeCursor();
 
 if($_SESSION['havemail']==0)
-    header('Location: ./../page/singup/singup.php'); 
+    header('Location: ./../page/singup'); 
 
     // Si tout va bien, on peut continuer
     $req = $bdd->prepare('SELECT motdepasse FROM utilisateur WHERE mail=?');
     $req->execute(array($_SESSION['mail']));
-            
+    echo($_SESSION['statue']."a");
     while($donne=$req->fetch())
    {
-               
        if (password_verify($_POST['password'],$donne['motdepasse']))
             {
                 include_once('./../classe/User.class.php');
 
                 $req->closeCursor();
-
                 $cePC=new User(1,NULL,NULL,NULL,NULL);
 
-               header('Location: ./../page/accueil/accueil.php');
                 $_SESSION['statue']=1;
+                header('Location: ./../page/accueil');
+               echo($_SESSION['statue']);
             }
     }
     $req->closeCursor();
-
-    header('Location: ./../page/singin/singin.php?mdp=error');  
-
+     header('Location: ./../page/singin?mdp=error');  
 ?>

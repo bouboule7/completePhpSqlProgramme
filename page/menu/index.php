@@ -6,7 +6,7 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./menu.css">
+    <link rel="stylesheet" href="./menu/menu.css">
     <title>Menu</title>
 </head>
 <body>
@@ -18,11 +18,11 @@ session_start();//ceci est a fin de pouvoir utiliser des variables de sessions g
         <div class="menu">
             <h3>Menu</h3>
             <ul class="list-group list-group-flush">
-            <li class="list-group-item"><a href="./../profil/profil.php?id=<?php echo($_SESSION['id']);?>">Voir le profil</a></li>
-                <li class="list-group-item"><a href="./../accueil/accueil.php">Accueil</a></li>
-                <li class="list-group-item"><a href="./../message/message.php">Message</a></li>
-                <li class="list-group-item"><a href="./../notification/notification.php">Notification</a></li>
-                <li class="list-group-item"><a href="./../contact/contact.php">Contact</a></li>
+            <li class="list-group-item"><a href="./profil?id=<?php echo($_SESSION['id']);?>">Voir le profil</a></li>
+                <li class="list-group-item"><a href="./accueil">Accueil</a></li>
+                <li class="list-group-item"><a href="./message">Message</a></li>
+                <li class="list-group-item"><a href="./notification">Notification</a></li>
+                <li class="list-group-item"><a href="./contact">Contact</a></li>
                 <li class="list-group-item"><a href=#">Setting</a></li>
                 <li class="list-group-item">Dapibus ac facilisis in</li>
                 <li class="list-group-item">Morbi leo risus</li>
