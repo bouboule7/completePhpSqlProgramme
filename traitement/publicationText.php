@@ -15,7 +15,7 @@
         $req=$bdd->prepare('INSERT INTO '.$_SESSION["id"].'post VALUE (:postname)');
         $req->execute(array('postname'=>$nomTable));
         $req->closeCursor();
-        $req = $bdd->query('CREATE TABLE '.$nomTable.' (id int,contenueText text,photo1 int, photo2 int, photo3 int, jour date, heure time, commentaire text, idCommentateur int, datecommentaire date, heurcommentaire time, reactionA int, reactionB int)');
+        $req = $bdd->query('CREATE TABLE '.$nomTable.' (id int,titre text, contenueText text,photo1 int, photo2 int, photo3 int, jour date, heure time, commentaire text, idCommentateur int AUTO_INCREMENT PRIMARY KEY, datecommentaire date, heurcommentaire time, reactionAdore int, reactionHaha int,reactionWow int,reactionTriste int,reactionGrr int )');
         $req->closeCursor();
         $req=$bdd->prepare('INSERT INTO '.$nomTable.' (id, contenueText,photo1,photo2, photo3, jour, heure, reactionA , reactionB ) VALUES (:id, :contenueText, :photo1, :photo2, :photo3, :jour, :heure, :reactionA , :reactionB)');
         $req->execute(array('id'=>$_SESSION['id'],

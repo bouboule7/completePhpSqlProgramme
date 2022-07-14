@@ -23,14 +23,25 @@
     width:60vw;
     background-color:#0000007d;
 }
-.message{
-    width: 100vw;
+.message, .messageDiscussion {
     margin: 80px auto auto;
+    width: 100%;
+}
+.contenuDiscuss{
+    padding:0 5%;
 }
 
 @media (min-width: 1200px) {
     .message{
         width: 60vw;
+    }
+    .messageDiscussion{
+        width: 80vw;
+    }
+}
+@media (max-width:1200px){
+    .col-md-3{
+        display: none;
     }
 }
 .mb-1{
@@ -71,4 +82,22 @@ img{
 }
 .plus{
     margin-top: 20px;
+}
+
+.messageDiscussion2Personne{
+    height: 60vh;
+    overflow: auto;
+}
+.imageMessage{
+    width: 80px;
+    height: auto;
+    border-radius: 50px;
+}
+.imageMessagePetit{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.apercuMessage{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3) !important;
 }
