@@ -1,54 +1,58 @@
-.row{
-    margin: auto;
-    justify-content:space-around;
+.profile{
+    margin: 80px 2vw;
 }
-@media (min-width: 1200px) {
-    .contact{
-        padding-left: 15vw;
-    }
-    .card{
-        flex-direction: column;
-    }
-    .voir-tout{
-        display: none;
-    }
-}
-@media (max-width:1200px){
-    .card{
-        flex-direction: row;
-        width: 70vw
-    }
-    .imgContact{
-        margin-left: 10%;
-        margin-right: -5%;
-    }
-    .col-md-3{
-        display: none;
-    }
-}
-.imgContact{
-    width: 225px;
-    height: 180px;
-}
-.imgAmis{
-    width: 40px;
-}
-.col{
-    width: max-content;
-}
-p{
-    margin-bottom: 1px;
-}
-.card-body{
-    padding:0px auto 1rem ;
-    margin: auto auto 2%;
-}
-.actualiser{
+.card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-header{
+    display: flex;
+  }
+  .card-title{
+    text-align: center;
+  }
+  .tab-content{
+    margin-top:0px;
+  }
+  .react{
     width: 30px;
+    padding: 0px;
+  }
+  small{
+    color: rgb(22, 22, 22);
+  }
+   .commentaire{
+    color: black;
+    padding-right: 5%;
+  }
+  .card-img-top{
+    height: 300px;
+    width: auto;
+    margin: auto;
+  }
+.publicationCard{
+    background-color: rgba(184, 184, 184, 0.438);
 }
-.contact{
-    margin-top: 80px;
-}
-.contenuContact{
-    padding-top: 0px;
-}
+  .photoDeCouverture{
+      width: 100%;
+  }
+  .blocContenue{
+      padding-left: 2%;
+      height: 65vh;
+      overflow: auto;
+  }
+  .couverture img{
+    border-radius:10px;
+  }
+  .couverture{
+    padding:1%;
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow: inset 20px 20px 60px #969696,
+            inset -20px -20px 60px #ffffff;
+  }
+  .couverture:hover{
+box-shadow: inset 20px 20px 60px #bebebe,
+            inset -20px -20px 60px #4c4b4b;
+  }

@@ -17,16 +17,15 @@
         $req->closeCursor();
         $req = $bdd->query('CREATE TABLE '.$nomTable.' (id int,titre text, contenueText text,photo1 int, photo2 int, photo3 int, jour date, heure time, commentaire text, idCommentateur int AUTO_INCREMENT PRIMARY KEY, datecommentaire date, heurcommentaire time, reactionAdore int, reactionHaha int,reactionWow int,reactionTriste int,reactionGrr int )');
         $req->closeCursor();
-        $req=$bdd->prepare('INSERT INTO '.$nomTable.' (id, contenueText,photo1,photo2, photo3, jour, heure, reactionA , reactionB ) VALUES (:id, :contenueText, :photo1, :photo2, :photo3, :jour, :heure, :reactionA , :reactionB)');
+        $req=$bdd->prepare('INSERT INTO '.$nomTable.' (id, contenueText,photo1,photo2, photo3, jour, heure ) VALUES (:id, :contenueText, :photo1, :photo2, :photo3, :jour, :heure)');
         $req->execute(array('id'=>$_SESSION['id'],
                             'contenueText'=>$_POST['publication'],
                             "photo1"=>0,
                             "photo2"=>0,
                             "photo3"=>0,
                             'jour'=>jour(),
-                            'heure'=>temps(),
-                            'reactionA'=>0,
-                            'reactionB'=>0  ));
+                            'heure'=>temps() 
+                        ));
     }
        header('Location: ./../page/accueil'); 
 ?>

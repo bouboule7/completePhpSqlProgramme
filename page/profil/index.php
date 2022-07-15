@@ -12,9 +12,7 @@
     <link rel="stylesheet" href="./profil/profil.css">
 </head>
 <body>
-
 <?php
-include("./../../component/entete/entete.html"); 
 if($_SESSION['statue']==1){
     include("./../../component/navigation/navigation.php"); 
     if(isset($_GET['id'])){

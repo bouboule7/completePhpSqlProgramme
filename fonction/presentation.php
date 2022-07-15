@@ -1,4 +1,4 @@
-<?php
+    <?php
 include_once('./../../fonction/pseudo.php');
     function presentation($id){
 
@@ -19,7 +19,8 @@ include_once('./../../fonction/pseudo.php');
         }
         if($id==$_SESSION['id']){
             ?>
-            <div class="tete">
+        <div class="row mb-3 profile">
+            <div class="col-md-4 ">
                 <div class="couverture">
                     <img  class="photoDeCouverture" src="<?php
                         if($nombrePhotoCouverture==0) 
@@ -27,7 +28,7 @@ include_once('./../../fonction/pseudo.php');
                         else
                             echo("./../../traitement/image.php?id=".$_SESSION['id']."&type=couverture&photoId=".$nombrePhotoCouverture);
                     ?>" alt="photo de couverture"/>
-                    <a class="modifierCouverture" href="./../modifierCouverture/modifierCouverture.php?id= <?php echo($_SESSION['id']);?>">Modifier</a>
+                    <a class="modifierCouverture" href="./modifierCouverture?id= <?php echo($_SESSION['id']);?>">Modifier</a>
                 </div>
                 <div class="profil">
                 <img  class="photoDeProfil" src="<?php
@@ -36,7 +37,7 @@ include_once('./../../fonction/pseudo.php');
                         else
                         echo("./../../traitement/image.php?id=".$_SESSION['id']."&type=profil&photoId=".$nombrePhotoProfil);
                     ?>" alt="photo de profil"/>
-                    <a class="modifierProfil" href="./../modifierProfil/modifierProfil.php?id= <?php echo($_SESSION['id']);?>">Modifier</a>
+                    <a class="modifierProfil" href="./modifierProfil?id= <?php echo($_SESSION['id']);?>">Modifier</a>
                 </div>
                 <div class="nomBloc">
                     <div class="margeNom"></div>
@@ -44,20 +45,6 @@ include_once('./../../fonction/pseudo.php');
                     <div class="margeNom"></div>
                 </div>
             </div>
-            <?php include_once('./../../fonction/presentationPublicationProfil.php');
-
-            $bdd5=connectionBDD();
-            $a=0; $b=10;
-            if(isset($_POST['a'],$_POST['b'])){
-                $a+=10; $b+=10;
-            }
-            $requete=$bdd5->query('SELECT postName FROM '.$_SESSION["id"].'post ORDER BY postName DESC LIMIT '.$a.','.$b.'');
-            while($result=$requete->fetch()){
-                presentationPublicationProfil($result['postName']);
-            }?>
-            <nav>
-
-            </nav>
             <?php 
         }
         else{
@@ -84,22 +71,26 @@ include_once('./../../fonction/pseudo.php');
                     <h2 class="nom"><?php echo(pseudo($bdd2,$id)); ?>
                     <div class="margeNom"></div>
                 </div>
-            </div>
-            <?php include_once('./../../fonction/presentationPublicationProfil.php');
-
-            $bdd5=connectionBDD();
-            $a=0; $b=10;
-            if(isset($_POST['a'],$_POST['b'])){
-                $a+=10; $b+=10;
-            }
-            $requete=$bdd5->query('SELECT postName FROM '.$_GET["id"].'post ORDER BY postName DESC LIMIT '.$a.','.$b.'');
-            while($result=$requete->fetch()){
-                presentationPublicationProfil($result['postName']);
-            }?>
-            <nav>
-
-            </nav>
+            </div>   
             <?php
         }
+        ?>
+        <div class="col-md-8 blocContenue">
+                <?php
+                    include_once('./../../fonction/presentationPublicationProfil.php');
+
+                    $bdd5=connectionBDD();
+                    $a=0; $b=10;
+                    if(isset($_POST['a'],$_POST['b'])){
+                        $a+=10; $b+=10;
+                    }
+                    $requete=$bdd5->query('SELECT postName FROM '.$_GET["id"].'post ORDER BY postName DESC LIMIT '.$a.','.$b.'');
+                    while($result=$requete->fetch()){
+                        presentationPublicationProfil($result['postName']);
+                    }
+                ?>
+        </div> 
+        <?php
     }
 ?>
+</div>
