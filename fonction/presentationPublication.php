@@ -4,6 +4,12 @@
       $bdd6=connectionBDD();
       $requ=$bdd6->query('SELECT * FROM '.$publicationId.'publication');
       $donner=($requ->fetch());
+      $love=$donner['reactionAdore'];
+      $haha=$donner['reactionHaha'];
+      $wow=$donner['reactionWow'];
+      $triste=$donner['reactionTriste'];
+      $grr=$donner['reactionGrr'];
+      
       $i=$publicationId;
 ?>
     <article class="my-3" id="typography">
@@ -21,34 +27,32 @@
             <div class="card bg-secondary mb-3">
               <div class="card-header"><small>11 mins ago</small></div>
               <div class="card-body">
-                <h5 class="card-title"><?php echo($donner['contenueText']);?></h5>
-            </div>
+                <form method="post" action="./publication">
+                <input type="hidden" value="<?php echo ($publicationId."publication");?>" name="publication" id="publication"/>
+                  <button class="btn-lien w-100">
+                    <h5 class="card-title"><?php echo($donner['contenueText']);?></h5>
+                  </button>
+                </form>
+              </div>
         </div>
-                <a href="#" class="btn btn-outline-danger"><img class="react" src="./../../assets/img/love.gif"/></a>
-                <a href="#"  class="btn btn-outline-warning"><img class="react" src="./../../assets/img/haha.gif"/><span class="badge badge bg-warning rounded-pill badge-light">8</span></a>
-                <a href="#"  class="btn btn-outline-info"><img class="react" src="./../../assets/img/wow.gif"/></a>
-                <a href="#" class="btn btn-outline-success"><img class="react" src="./../../assets/img/triste.gif"/><span class="badge badge bg-success rounded-pill badge-light">8</span></a>
-                <a href="#"  class="btn btn-outline-secondary"><img class="react" src="./../../assets/img/grr.gif"/></a>
-                <a href="#" class="btn btn-outline-dark">Commenter</a><br/>
-                <small class="commentaire">Commentaires recents</small>
-                <a href="#" classe="moreComments">Voir tout les commentaires</a>
       <?php
              }   
         else{?>
           <div class="card bg-secondary mb-3 mb-3">
               <div class="card-header"><small>11 mins ago</small></div>
-        
               <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <form method="post" action="./publication">
+                <input type="hidden" value="<?php echo ($publicationId."publication");?>" name="publication" id="publication"/>
+                  <button class="btn-lien w-100">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="./../assets/img/couverture.jpeg" class="bd-placeholder-img d-block card-img-top " alt="...">
-                  </div>
-                  <div class="carousel-item">
                     <img  class="bd-placeholder-img d-block card-img-top" src="<?php 
                         echo("./../../traitement/image.php?id=".$donner['id']."&type=publication&photoId=".$donner['photo1']);
                     ?>" alt="photo de profil"/>
                   </div>
                 </div>
+                  </button>
+                </form>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
@@ -59,26 +63,28 @@
                 </button>
               </div>
 
-              
-                  
-
               <div class="card-body">
-                <h5 class="card-title"><?php echo($donner['contenueText']);?></h5>
-                <p class="card-text">Legende blablabla , legende blablabla.</p>
+              <form method="post" action="./publication">
+                <button class="btn-lien w-100">
+                    <h5 class="card-title"><?php echo($donner['contenueText']);?></h5>
+                    <p class="card-text">Legende blablabla , legende blablabla.</p>
+                  </button>
+                </form>
               </div>
             </div>
-            <a href="#" class="btn btn-outline-danger btn-danger"><img class="react" src="./../../assets/img/love.gif"/<span class="badge rounded-pill badge-light"><span class="badge rounded-pill badge-light">5</span></a>
-            <a href="#" class="btn btn-outline-warning"><img class="react" src="./../../assets/img/haha.gif"/></a>
-            <a href="#" class="btn btn-outline-info"><img class="react" src="./../../assets/img/wow.gif"/><span class="badge badge bg-info rounded-pill badge-light">8</span></a>
-            <a href="#" class="btn btn-outline-success"><img class="react" src="./../../assets/img/triste.gif"/></a>
-            <a href="#" class="btn btn-outline-secondary"><img class="react" src="./../../assets/img/grr.gif"/><span class="badge badge bg-secondary rounded-pill badge-light">8</span></a>
-            <a href="#" class="btn btn-outline-dark">Commenter</a><br/>
-                <small class="commentaire">Commentaires recents</small>
-                <a href="#" classe="moreComments">Voir tout les commentaires</a>
           <?php 
  
         }
 ?>
+
+                <a href="#" class="btn btn-outline-danger"><img class="react" src="./../../assets/img/love.gif"/><span class="badge badge bg-danger rounded-pill badge-light"><?php echo $love; ?></span></a>
+                <a href="#"  class="btn btn-outline-warning"><img class="react" src="./../../assets/img/haha.gif"/><span class="badge badge bg-warning rounded-pill badge-light"><?php echo($haha);?></span></a>
+                <a href="#"  class="btn btn-outline-info"><img class="react" src="./../../assets/img/wow.gif"/><span class="badge badge bg-info rounded-pill badge-light"><?php echo($wow);?></span></a>
+                <a href="#" class="btn btn-outline-success"><img class="react" src="./../../assets/img/triste.gif"/><span class="badge badge bg-success rounded-pill badge-light"><?php echo($triste);?></span></a>
+                <a href="#"  class="btn btn-outline-secondary"><img class="react" src="./../../assets/img/grr.gif"/><span class="badge badge bg-secondary rounded-pill badge-light"><?php echo($grr);?></span></a>
+                <a href="#" class="btn btn-outline-dark">Commenter</a><br/>
+                <small class="commentaire">Commentaires recents</small>
+                <a href="#" classe="moreComments">Voir tout les commentaires</a>
      <div>
               <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
                 <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home<?php echo($i);?>" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Koto kely</button>

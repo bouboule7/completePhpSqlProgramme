@@ -1,0 +1,11 @@
+.publication{
+    margin: 80px auto;
+    width: 70%;
+}
+.react{
+    width: 30px;
+    height: 25px;
+}
+.listeReaction{
+    display: flex;
+}
